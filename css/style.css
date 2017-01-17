@@ -1,11 +1,30 @@
-.row {
+GENERAL STYLES 
 
+
+
+
+a {
+  text-decoration: none;
 }
 
-.test1 {
-  background-color: silver;
+
+/*SECTION 1*/
+
+.s1 {
+  background-color: black;
 }
 
-.test2 {
-  background-color: lemonchiffon;
+.s1_phone_title, .s1_phone_number {
+  display: inline-block;
+}
+.s1_phone {
+  background-color: grey;
+}
+
+.currency_field {
+  width: 30px;
+}
+
+.search_field {
+  width: 100px;
 }
