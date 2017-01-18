@@ -1,30 +1,75 @@
-GENERAL STYLES 
+/*------GENERAL STYLES------ */
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  background-color: white;
+}
 
+*:focus {
+  outline: none;
+}
 
-a {
+a,
+a:hover {
   text-decoration: none;
 }
 
+.section {
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+}
 
-/*SECTION 1*/
+
+/*------SECTION 1------*/
 
 .s1 {
-  background-color: black;
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  height: 30px;
+  max-width: 1200px;
+  font-size: 0.9em;
+  padding-left: 114px;
+  padding-right: 114px;
 }
 
-.s1_phone_title, .s1_phone_number {
-  display: inline-block;
-}
 .s1_phone {
-  background-color: grey;
+  float: left;
+  
+    
 }
 
-.currency_field {
-  width: 30px;
+.s1_currency, .s1_search, .s1_user {
+  float: right;
+
+}
+.s1_current_currency, .s1_caret, .s1_user_icon, .s1_current_user {
+  vertical-align: middle;
 }
 
-.search_field {
-  width: 100px;
+.s1_user_icon, .s1_user_icon, .s1_caret {
+  max-width: 20px;
+  max-height: 20px;
+  margin: 7px;
+}
+
+.s1_dropbtn {
+  height: 30px;
+  background-color: #000000;
+    color: white;
+text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-left: solid 1px #444444;
+    border-right: solid 1px #444444;
+    margin-left: -1px;
+}
+
+.s1_dropbtn:first-child {
+  border: none;
 }
