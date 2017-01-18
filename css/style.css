@@ -32,21 +32,27 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   height: 30px;
-  max-width: 1200px;
+max-width: 972px;
   font-size: 0.9em;
   padding-left: 114px;
   padding-right: 114px;
 }
 
+.s1_left {
+  float: left; 
+}
+.s1_right {
+  float: right;
+}
+
 .s1_phone {
-  float: left;
-  
-    
+  float: left; 
 }
 
 .s1_currency, .s1_search, .s1_user {
-  float: right;
-
+ float: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .s1_current_currency, .s1_caret, .s1_user_icon, .s1_current_user {
   vertical-align: middle;
@@ -55,7 +61,6 @@ a:hover {
 .s1_user_icon, .s1_user_icon, .s1_caret {
   max-width: 20px;
   max-height: 20px;
-  margin: 7px;
 }
 
 .s1_dropbtn {
@@ -73,3 +78,65 @@ text-transform: uppercase;
 .s1_dropbtn:first-child {
   border: none;
 }
+
+.s1_dropdown_content_currency {
+    background-color: #000000;
+
+      display: none;
+      font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.9em;
+}
+.s1_dropdown_content_currency > ul > li {
+  list-style: none;
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+
+}
+.s1_dropdown_content_currency > ul > li > a {
+  color: white;
+}
+.s1_dropdown_content_user {
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  /*height: 30px;*/
+  line-height: 30px;
+  font-size: 0.9em;
+  color: white;
+  display: none;
+}
+.s1_email, .s1_password, .s1_checkbox {
+  display: inline;
+
+  margin-right: 10px;
+}
+.s1_email > input, .s1_password > input {
+  border-radius: 5px;
+  border: solid 1px lightcoral;
+  height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.s1_signin {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  border-radius: 5px;
+  height: 28px;
+  color: white;
+  border: none;
+  /*border: solid 1px grey;*/
+  background-color: lightcoral;
+   cursor: pointer;
+}
+
+
+
+.show {
+  display:block;
+  }

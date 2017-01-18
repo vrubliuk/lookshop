@@ -19,41 +19,57 @@
 </head>
 
 <body>
-	<div class="section s1">
-		<button class="s1_phone s1_dropbtn " >		
-					custom care: 888-23-4567
-		</button>
-
-
-<button class="s1_search s1_dropbtn">
-	<img class="s1_user_icon" src="images/1-search.png" alt="">
-</button>
-
-
-	<button class="s1_user s1_dropbtn">
-				<img class="s1_user_icon" src="images/1-user-icon.png" alt="">
-				<span class="s1_current_user" >My account</span>
-		</button>
-
-		<button class="s1_currency s1_dropbtn">
+	<div class="section s1  ">
+		<div class="s1_left">
+			<button class="s1_phone s1_dropbtn ">custom care: 888-23-4567</button>
+		</div>
+		<div class="s1_right">
+			<button class="s1_currency s1_dropbtn" onclick="ShowCurrencyList()">
 				<span class="s1_current_currency" >&#36; us</span>
 				<img class="s1_caret" src="images/caret-light.png" alt="">
 		</button>
-
-		
-	
-		
-
-
-
-
-
-
-
-
-
-		
+			<button class="s1_user s1_dropbtn" onclick="ShowLoginForm()">
+				<img class="s1_user_icon" src="images/1-user-icon.png" alt="">
+				<span class="s1_current_user" >My account</span>
+		</button>
+			<button class="s1_search s1_dropbtn" onclick="ShowSearchForm()" >
+			<img class="s1_search_icon" src="images/1-search.png" alt="">
+		</button>
+		</div>
 	</div>
+	<div class="s1_dropdown_content_currency section ">
+		<ul>
+			<li><a href="#">&#36; US</a></li>
+			<li><a href="#">&euro; EU</a></li>
+			<li><a href="#">&#8372; UA</a></li>
+		</ul>
+	</div>
+	<div class="s1_dropdown_content_user section ">
+		<form action="">
+			<div class="s1_email">
+				<input type="text" name="" value="" placeholder="Email">
+			</div>
+			<div class="s1_password">
+				<input type="text" name="" value="" placeholder="Password">
+			</div>
+			<div class="s1_checkbox">
+				<input type="checkbox"> <label for="">Remember me</label>
+			</div>
+			<button type="submit" class="s1_signin">Sign in</button>
+		</form>
+	</div>
+	<div class="s1_dropdown_content_search section ">
+		<form action="">
+			<div class="s1_search_box">
+				<input type="text" name="" value="" placeholder="Search Here">
+			</div>
+			<button type="submit" class="s1_signin">
+
+			</button>
+		</form>
+	</div>
+
+
 	<!--<div class="container">
 		<div class="row s1">
 			
