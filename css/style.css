@@ -62,7 +62,6 @@ a:hover {
 .s1_currency,
 .s1_search,
 .s1_user {
-  /*float: left;*/
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -181,3 +180,35 @@ a:hover {
   border-top: solid 1px #444444;
   clear: both;
 }
+
+/*------SECTION 2------*/
+
+.s2 {
+  max-width: 972px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+.s2_logo_section {
+  display: inline-block;
+  height: 30px;
+  width: 125px;
+  background-image: url("../images/2-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.s2_list {
+  list-style: none;
+}
+.s2_list_item {
+   cursor: pointer;
+   display: inline-block;
+}
+
+/*.s2_list_item::after {
+ padding-left: 5px;
+   vertical-align: 10%;
+  content: url('../images/caret-dark.png');
+   cursor: pointer;
+}*/
