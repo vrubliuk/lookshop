@@ -174,3 +174,57 @@ $(document).mouseup(function (e) {
         $(".s2_dropdown_content").removeClass("show");
     }
 });
+
+//CHECK WIDTH ON RESIZE AND CHANGE MENU APPEARANCE IF WINDOW IS SMALL
+window.addEventListener("resize", function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+
+        document.getElementsByClassName("s2_logo_section")[0].style.width = "100%";
+        // document.getElementsByClassName("s2_logo_section")[0].style.display = "block";
+
+
+        document.getElementsByClassName("s2_cart_top ")[0].style.width = "100%";
+
+
+        document.getElementsByClassName("s1_left")[0].style.backgroundColor = "white";
+        document.getElementsByClassName("s1_phone")[0].style.color = "#838383";
+        document.getElementsByClassName("s1_email")[0].style.display = "block";
+        document.getElementsByClassName("s1_password")[0].style.display = "block";
+        document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
+        document.getElementsByClassName("s1_signin")[0].style.display = "block";
+        document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
+
+    } else if (w > 640) {
+
+        document.getElementsByClassName("s2_logo_section")[0].removeAttribute("style");
+
+
+
+        document.getElementsByClassName("s2_cart_top")[0].removeAttribute("style");
+        document.getElementsByClassName("s1_phone")[0].style.color = "white";
+        document.getElementsByClassName("s1_email")[0].style.display = "inline-block";
+        document.getElementsByClassName("s1_password")[0].style.display = "inline-block";
+        document.getElementsByClassName("s1_checkbox")[0].style.display = "inline-block";
+        document.getElementsByClassName("s1_signin")[0].style.display = "inline-block";
+        document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
+    }
+});
+
+//CHECK WIDTH ON LOAD AND CHANGE MENU APPEARANCE IF WINDOW IS SMALL
+window.onload = function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+
+        document.getElementsByClassName("s2_logo_section")[0].style.width = "100%";
+
+
+        
+    } else if (w > 640) {
+
+          document.getElementsByClassName("s2_logo_section")[0].removeAttribute("style");
+
+
+    }
+    return;
+};
