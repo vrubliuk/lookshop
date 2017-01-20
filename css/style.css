@@ -192,6 +192,7 @@ a:hover {
 }
 .s2_logo_section {
   display: inline-block;
+  vertical-align: middle;
   height: 30px;
   width: 125px;
   background-image: url("../images/2-logo.png");
@@ -199,17 +200,43 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-.s2_list {
-  list-style: none;
+.s2_menu {
+  display: inline-block;
+  vertical-align: middle;
 }
-.s2_list_item {
-   cursor: pointer;
-   display: inline-block;
+.s2_cart {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/*.s2_list_item::after {
- padding-left: 5px;
-   vertical-align: 10%;
-  content: url('../images/caret-dark.png');
+.s2_cart_top {
+  height: 30px;
+  width: 212px;
+  border: solid 1px #d6d6d6;
    cursor: pointer;
-}*/
+  
+}
+
+.s2_cart_top > span {
+  float: left;
+  color: #d6d6d6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  line-height: 30px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.s2_cart_top > img {
+  margin-top: 13px;
+  float: right;
+  line-height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.s2_cart_bottom {
+  height: 30px;
+  width: 212px;
+  border: solid 1px #d6d6d6;
+  
+}
