@@ -24,9 +24,6 @@ a:hover {
   margin: auto;
 }
 
-.show {
-  display: block;
-}
 
 
 /*------SECTION 1------*/
@@ -179,6 +176,10 @@ a:hover {
   display: none;
   border-top: solid 1px #444444;
   clear: both;
+}
+
+.show {
+  display: block;
 }
 
 /*------SECTION 2------*/

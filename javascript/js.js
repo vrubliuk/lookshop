@@ -88,7 +88,7 @@ window.onload = function () {
         document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
         document.getElementsByClassName("s1_signin")[0].style.display = "block";
         document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
-    } else if (w > 820) {
+    } else if (w > 640) {
         document.getElementsByClassName("s1_left")[0].removeAttribute("style");
         document.getElementsByClassName("s1_right")[0].removeAttribute("style");
         document.getElementsByClassName("s1_phone")[0].style.color = "white";
