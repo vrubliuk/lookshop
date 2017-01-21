@@ -1,9 +1,15 @@
+window.onload = function () {
+    ResizeOnLoadSection1();
+    ResizeOnloadSection2();
+};
+
+
+// SECTION 1
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-
 function ShowCurrencyList() {
     var x = document.getElementsByClassName("s1_dropdown_content_currency")[0].classList.contains("show");
-
     if (x !== true) {
         $(".s1_dropdown_content_currency").addClass("show");
         $(".s1_dropdown_content_user").removeClass("show");
@@ -16,7 +22,6 @@ function ShowCurrencyList() {
 }
 
 function ShowLoginForm() {
-
     var x = document.getElementsByClassName("s1_dropdown_content_user")[0].classList.contains("show");
     if (x !== true) {
         $(".s1_dropdown_content_user").addClass("show");
@@ -30,7 +35,6 @@ function ShowLoginForm() {
 }
 
 function ShowSearchForm() {
-    // document.getElementsByClassName("s1_dropdown_content_search")[0].classList.toggle("show");
     var x = document.getElementsByClassName("s1_dropdown_content_search")[0].classList.contains("show");
     if (x !== true) {
         $(".s1_dropdown_content_search").addClass("show");
@@ -42,7 +46,6 @@ function ShowSearchForm() {
         $(".s1_dropdown_content_user").removeClass("show");
     }
 }
-
 $(document).mouseup(function (e) {
     var container1 = $('.s1_dropdown_content_currency');
     var container2 = $('.s1_dropdown_content_user');
@@ -82,7 +85,6 @@ $(".s1_search_button").click(function () {
 window.addEventListener("resize", function () {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 640) {
-        document.getElementsByClassName("s1_left")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_left")[0].style.width = "100%";
         document.getElementsByClassName("s1_right")[0].style.width = "100%";
         document.getElementsByClassName("s1_left")[0].style.backgroundColor = "white";
@@ -105,11 +107,9 @@ window.addEventListener("resize", function () {
     }
 });
 
-//CHECK WIDTH ON LOAD AND CHANGE MENU APPEARANCE IF WINDOW IS SMALL
-window.onload = function () {
+function ResizeOnLoadSection1() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 640) {
-        document.getElementsByClassName("s1_left")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_left")[0].style.width = "100%";
         document.getElementsByClassName("s1_right")[0].style.width = "100%";
         document.getElementsByClassName("s1_left")[0].style.backgroundColor = "white";
@@ -130,7 +130,8 @@ window.onload = function () {
         document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
     }
     return;
-};
+}
+
 
 
 // SECTION 2
@@ -152,11 +153,10 @@ $(document).mouseup(function (e) {
         $(".s2_cart_list").removeClass("show");
     }
 });
-
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 $(".s2_dropbtn_container").click(function () {
-    var x = document.getElementsByClassName("s2_dropdown_content")[0].classList.contains("show");
+    var x = $(this).hasClass("show");
     if (x !== true) {
         $(this).siblings('.s2_dropdown_content').toggleClass("show");
         $(".s2_dropbtn_container").not(this).siblings('.s2_dropdown_content').removeClass("show");
@@ -165,7 +165,6 @@ $(".s2_dropbtn_container").click(function () {
         $(".s2_dropbtn_container").not(this).siblings('.s2_dropdown_content').removeClass("show");
     }
 });
-
 $(document).mouseup(function (e) {
     var container1 = $('.s2_dropbtn_container');
     var container2 = $('.s2_dropdown_content');
@@ -174,57 +173,115 @@ $(document).mouseup(function (e) {
         $(".s2_dropdown_content").removeClass("show");
     }
 });
-
-//CHECK WIDTH ON RESIZE AND CHANGE MENU APPEARANCE IF WINDOW IS SMALL
 window.addEventListener("resize", function () {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (w <= 640) {
-
-        document.getElementsByClassName("s2_logo_section")[0].style.width = "100%";
-        // document.getElementsByClassName("s2_logo_section")[0].style.display = "block";
-
-
-        document.getElementsByClassName("s2_cart_top ")[0].style.width = "100%";
-
-
-        document.getElementsByClassName("s1_left")[0].style.backgroundColor = "white";
-        document.getElementsByClassName("s1_phone")[0].style.color = "#838383";
-        document.getElementsByClassName("s1_email")[0].style.display = "block";
-        document.getElementsByClassName("s1_password")[0].style.display = "block";
-        document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
-        document.getElementsByClassName("s1_signin")[0].style.display = "block";
-        document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
-
-    } else if (w > 640) {
-
-        document.getElementsByClassName("s2_logo_section")[0].removeAttribute("style");
-
-
-
-        document.getElementsByClassName("s2_cart_top")[0].removeAttribute("style");
-        document.getElementsByClassName("s1_phone")[0].style.color = "white";
-        document.getElementsByClassName("s1_email")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_password")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_checkbox")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_signin")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
+    if (w <= 880) {
+        document.getElementsByClassName("s2_menu")[0].style.display = "none";
+        document.getElementsByClassName("s2_menu_button")[0].style.display = "block";
+        document.getElementsByClassName("section2")[0].style.height = "174px";
+        $(".s2_menu").css("width", "100%");
+        $(".s2_menu").css("line-height", "30px");
+        $(".s2_dropdown").css("display", "block");
+        $(".s2_dropdown").css("width", "100%");
+        $(".s2_dropdown_content").css("text-align", "center");
+        $(".s2_dropdown_content").css("padding-bottom", "5px");
+        $(".s2_dropbtn_container").css("background-color", "#fafafa");
+        $(".s2_dropbtn_container").hover(
+            function () {
+                $(this).css("background-color", "#f2f2f2");
+            },
+            function () {
+                $(this).css("background-color", "#fafafa");
+            }
+        );
+        $(".s2_logo_section").css("width", "100%");
+        $(".s2_cart").css("width", "100%");
+        $(".s2").css("padding-top", "0px");
+    } else if (w > 880) {
+        document.getElementsByClassName("s2_menu")[0].style.display = "block";
+        document.getElementsByClassName("s2_menu_button")[0].style.display = "none";
+        document.getElementsByClassName("section2")[0].style.height = "104px";
+        document.getElementsByClassName("s2_dropdown")[0].style.display = "inline-block";
+        $(".s2_dropdown").css("display", "inline-block");
+        $(".s2_menu").css("line-height", "62px");
+        $(".s2_dropdown_content").css("text-align", "left");
+        $(".s2_dropdown_content").css("padding-bottom", "15px");
+        $(".s2_dropbtn_container").css("background-color", "white");
+        $(".s2_dropbtn_container").hover(
+            function () {
+                $(this).css("background-color", "");
+            },
+            function () {
+                $(this).css("background-color", "");
+            }
+        );
+        $(".s2_menu").css("width", "");
+        $(".s2_dropdown").css("width", "");
+        $(".s2_logo_section").css("width", "");
+        $(".s2_cart").css("width", "");
+        $(".s2").css("padding-top", "");
     }
 });
 
-//CHECK WIDTH ON LOAD AND CHANGE MENU APPEARANCE IF WINDOW IS SMALL
-window.onload = function () {
+function ResizeOnloadSection2() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (w <= 640) {
-
-        document.getElementsByClassName("s2_logo_section")[0].style.width = "100%";
-
-
-        
-    } else if (w > 640) {
-
-          document.getElementsByClassName("s2_logo_section")[0].removeAttribute("style");
-
-
+    if (w <= 880) {
+        document.getElementsByClassName("s2_menu")[0].style.display = "none";
+        document.getElementsByClassName("s2_menu_button")[0].style.display = "block";
+        document.getElementsByClassName("section2")[0].style.height = "174px";
+        $(".s2_menu").css("width", "100%");
+        $(".s2_menu").css("line-height", "30px");
+        $(".s2_dropdown").css("display", "block");
+        $(".s2_dropdown").css("width", "100%");
+        $(".s2_dropdown_content").css("text-align", "center");
+        $(".s2_dropdown_content").css("padding-bottom", "5px");
+        $(".s2_dropbtn_container").css("background-color", "#fafafa");
+        $(".s2_dropbtn_container").hover(
+            function () {
+                $(this).css("background-color", "#f2f2f2");
+            },
+            function () {
+                $(this).css("background-color", "#fafafa");
+            }
+        );
+        $(".s2_logo_section").css("width", "100%");
+        $(".s2_cart").css("width", "100%");
+        $(".s2").css("padding-top", "0px");
+    } else if (w > 880) {
+        document.getElementsByClassName("s2_menu")[0].style.display = "block";
+        document.getElementsByClassName("s2_menu_button")[0].style.display = "none";
+        document.getElementsByClassName("section2")[0].style.height = "104px";
+        document.getElementsByClassName("s2_dropdown")[0].style.display = "inline-block";
+        $(".s2_dropdown").css("display", "inline-block");
+        $(".s2_menu").css("line-height", "62px");
+        $(".s2_dropdown_content").css("text-align", "left");
+        $(".s2_dropdown_content").css("padding-bottom", "15px");
+        $(".s2_dropbtn_container").css("background-color", "white");
+        $(".s2_menu").css("width", "");
+        $(".s2_dropdown").css("width", "");
+        $(".s2_logo_section").css("width", "");
+        $(".s2_cart").css("width", "");
+        $(".s2").css("padding-top", "");
     }
     return;
-};
+}
+
+$(".s2_menu_icon").click(function () {
+    var x = $(".s2_menu").css("display");
+    if (x === "none") {
+        document.getElementsByClassName("s2_menu")[0].style.display = "block";
+    } else {
+        document.getElementsByClassName("s2_menu")[0].style.display = "none";
+    }
+});
+
+$(document).mouseup(function (e) {
+    var container1 = $('.s2_menu');
+    var container2 = $('.s2_menu_icon');
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (!container1.is(e.target) && container1.has(e.target).length === 0 &&
+        !container2.is(e.target) && container2.has(e.target).length === 0 &&
+        w <= 880) {
+        document.getElementsByClassName("s2_menu")[0].style.display = "none";
+    }
+});

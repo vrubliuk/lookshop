@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>LookShop</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="icon" href="images/icon.png">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+					crossorigin="anonymous">-->
+	<!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">-->
+	<!--<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">-->
+	<!--<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="carousel.css">-->
+		<link rel="stylesheet" href="css/style.css">
+		<!--<link type="text/css" href="scrollbar/jquery.jscrollpane.css" rel="stylesheet" media="all" />-->
+</head>
+
+<body>
+	<!--SECTION 1-->
+	<div class="section s1">
+		<div class="s1_container">
+			<div class="s1_left">
+				<button class="s1_phone ">custom care: 888-23-4567</button>
+			</div>
+			<div class="s1_right">
+				<button class="s1_currency s1_dropbtn" onclick="ShowCurrencyList()">
+				<span class="s1_current_currency" >&#36; us</span>
+				<img class="s1_caret" src="images/caret-light.png" alt="">
+		</button>
+				<button class="s1_user s1_dropbtn" onclick="ShowLoginForm()">
+				<img class="s1_user_icon" src="images/1-user-icon.png" alt="">
+				<span class="s1_current_user" >My account</span>
+		</button>
+				<button class="s1_search s1_dropbtn" onclick="ShowSearchForm()">
+			<img class="s1_search_icon" src="images/1-search.png" alt="">
+		</button>
+			</div>
+		</div>
+	</div>
+	<div class=" s1_dropdown_content_currency section ">
+		<ul>
+			<li><a class="s1_currency_value" href="#">&#36; US</a></li>
+			<li><a class="s1_currency_value" href="#">&euro; EU</a></li>
+			<li><a class="s1_currency_value" href="#">&#8372; UA</a></li>
+		</ul>
+	</div>
+	<div class="s1_dropdown_content_user section ">
+		<form action="">
+			<div class="s1_email">
+				<input type="text" name="" value="" placeholder="Email">
+			</div>
+			<div class="s1_password">
+				<input type="text" name="" value="" placeholder="Password">
+			</div>
+			<div class="s1_checkbox">
+				<input type="checkbox"> <label for="">Remember me</label>
+			</div>
+			<button type="submit" class="s1_signin">Sign in</button>
+		</form>
+	</div>
+	<div class="s1_dropdown_content_search section ">
+		<form action="">
+			<div class="s1_search_box">
+				<input type="text" name="" value="" placeholder="Type Here">
+			</div>
+			<button type="submit" class="s1_search_button">Search</button>
+		</form>
+	</div>
+	<!--SECTION 2-->
+	<div class="section2">
+		<div class="s2">
+			<div class="s2_main">
+			<a href="#" >	<div class="s2_logo_section"></div> </a>
+				<div class="s2_cart">
+					<div class="s2_cart_top">
+						<span>Your cart</span>
+						<img src="images/caret-light.png" alt="">
+					</div>
+					<div class="s2_cart_list">
+						<ul class="s2_cart_item_list">
+							<a href="">
+								<li class="s2_cart_item">Item 1</li>
+							</a>
+							<a href="">
+								<li class="s2_cart_item">Item 2</li>
+							</a>
+							<a href="">
+								<li class="s2_cart_item">Item 3</li>
+							</a>
+							<a href="">
+								<li class="s2_cart_item">Item 4</li>
+							</a>
+							<a href="">
+								<li class="s2_cart_item">Item 5</li>
+							</a>
+						</ul>
+					</div>
+					<div class="s2_cart_bottom">
+						<img src="images/2-shopping-cart.png" alt="">
+						<div class="s2_cart_bottom_right">
+							<div class="s2_cart_total_item">
+								<span class="s2_cart_item_number">0</span>
+								<span class="s2_cart_item_text">items</span>
+							</div>
+							<div class="s2_cart_total_price">
+								<span class="s2_cart_currency">$</span>
+								<span class="s2_cart_price_number">0</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="s2_menu_button">
+					<div class="s2_menu_name">
+						menu
+					</div>
+					<div class="s2_menu_icon">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="s2_menu">
+					<div class="s2_dropdown">
+						<div class="s2_dropbtn_container">
+							<button class="s2_dropbtn">new</button>
+							<img src="images/caret-dark.png" alt="">
+						</div>
+						<div class="s2_dropdown_content">
+							<a href="">Item 1</a>
+							<a href="">Item 2</a>
+							<a href="">Item 3</a>
+							<a href="">Item 4</a>
+							<a href="">Item 5</a>
+						</div>
+					</div>
+					<div class="s2_dropdown">
+						<div class="s2_dropbtn_container">
+							<button class="s2_dropbtn">designers</button>
+							<img src="images/caret-dark.png" alt="">
+						</div>
+						<div class="s2_dropdown_content">
+							<a href="">Item 1</a>
+							<a href="">Item 2</a>
+							<a href="">Item 3</a>
+							<a href="">Item 4</a>
+						</div>
+					</div>
+					<div class="s2_dropdown">
+						<div class="s2_dropbtn_container">
+							<button class="s2_dropbtn">women</button>
+							<img src="images/caret-dark.png" alt="">
+						</div>
+						<div class="s2_dropdown_content">
+							<a href="">Item 1</a>
+							<a href="">Item 2</a>
+							<a href="">Item 3</a>
+						</div>
+					</div>
+					<div class="s2_dropdown">
+						<div class="s2_dropbtn_container">
+							<button class="s2_dropbtn">men</button>
+							<img src="images/caret-dark.png" alt="">
+						</div>
+						<div class="s2_dropdown_content">
+							<a href="">Item 1</a>
+							<a href="">Item 2</a>
+							<a href="">Item 3</a>
+							<a href="">Item 4</a>
+						</div>
+					</div>
+					<div class="s2_dropdown">
+						<div class="s2_dropbtn_container">
+							<button class="s2_dropbtn">clearence</button>
+							<img src="images/caret-dark.png" alt="">
+						</div>
+						<div class="s2_dropdown_content">
+							<a href="">Item 1</a>
+							<a href="">Item 2</a>
+							<a href="">Item 3</a>
+							<a href="">Item 4</a>
+							<a href="">Item 5</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--SECTION 3-->
+	<div class="section">
+		<div class="s3"></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+					crossorigin="anonymous"></script>-->
+	<!--<script type="text/javascript" src="scrollbar/jquery.mousewheel.js"></script>-->
+	<!--<script type="text/javascript" src="scrollbar/jquery.jscrollpane.min.js"></script>-->
+	<!--<script type="text/javascript" src="bootstrap.min.js"></script>-->
+	<script src="javascript/js.js" type="text/javascript"></script>
+</body>
+
+</html>
