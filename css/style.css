@@ -526,6 +526,7 @@ border-bottom: solid 1px #d6d6d6;
   max-width: 1200px;
   position: relative;
   margin: auto;
+ 
 }
 
 /* Next & previous buttons */
@@ -691,9 +692,9 @@ border-bottom: solid 1px #811a37;
   color: white;
   font-weight: 300;
   font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase;
+  text-transform: uppercase;
   height: 54px;
-  line-height: 54px;
+  line-height: 50px;
   border: none;
   background-color: #fd926d;
   border-bottom: solid 3px #dd6b44;
@@ -724,7 +725,7 @@ border-bottom: solid 1px #811a37;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  
+   margin-bottom: 14px;
 }
 
 .active, .dot:hover {
@@ -749,3 +750,104 @@ border-bottom: solid 1px #811a37;
   to {opacity: 1}
 }
 
+/*SECTION 4*/
+.section4 {
+  background-color: #ededed;
+}
+
+.s4 {
+ max-width: 972px;
+ margin: auto;
+}
+.s4::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.s4_left {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  float: left;
+  /*border: solid 1px red;*/
+}
+.s4_right {
+ 
+  float: right;
+  /*border: solid 1px royalblue;*/
+}
+
+.s4_left_text, .s4_right_text {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.s4_form {
+  display: inline-block;
+  /*font-size: 0em;*/
+  vertical-align: middle;
+}
+.s4_input {
+  border: none;
+  height: 28px;
+  width: 132px;
+  line-height: 28px;
+  font-size: 0.8em;
+
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 10px;
+  vertical-align: middle;
+  
+}
+.s4_submit {
+  border: none;
+  height: 28px;
+  background-color: #fd926d;
+  border-bottom: solid 2px #dd6b44;
+  vertical-align: middle;
+  line-height: 29px;
+  cursor: pointer;
+  margin-left: -4px;
+  width: 28px;
+}
+
+.s4_submit:hover {
+  background-color: #dd6b44;
+}
+.s4_social {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.s4_social_link {
+  width: 56px;
+  height: 56px;
+ display: inline-block;
+ line-height: 56px;
+  /*border: solid 1px royalblue;*/
+  
+}
+.s4_social_link1, .s4_social_link3 {
+  background-color: #f7f7f7;
+}
+.s4_social_link1:hover, .s4_social_link3:hover {
+
+  background-color: white;
+}
+.s4_social_link2 {
+ 
+  background-color: #ededed;
+}
+.s4_social_link2:hover {
+
+    background-color: white;
+}
+
+.s4_social_link > img {
+   vertical-align: middle;
+}
