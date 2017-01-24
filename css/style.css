@@ -851,3 +851,71 @@ border-bottom: solid 1px #811a37;
 .s4_social_link > img {
    vertical-align: middle;
 }
+
+
+/*SECTION 5*/
+
+.s5 {
+ max-width: 972px;
+ margin: auto;
+ margin-top: 46px;
+ margin-bottom: 46px;
+ text-align: center;
+ /*font-size: 0;*/
+
+}
+.s5::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.s5_left {
+   width: 50%;
+  /*display: inline-block;*/
+  /*max-width: 485px;*/
+  float: left;
+  margin-top: 1px;
+  margin-bottom: 1px;
+
+
+  /*overflow: hidden;*/
+  /*display: table-cell;*/
+   /*height: 340px;*/
+   min-width: 320px;
+
+
+}
+.s5_big_tile {
+  background-image: url("../images/5-1.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 340px;
+  display: flex;
+  align-items: center;
+   
+   /*max-width: 485px;*/
+}
+.s5_big_tile_text {
+
+  margin-left: auto;
+}
+
+
+
+
+
+.s5_right {
+  min-width: 320px;
+  /*display: inline-block;*/
+  float: right;
+  width: 50%;
+  /*height: 340px;*/
+    /*margin-left: -4px;*/
+
+    margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: palevioletred;
+}
+.s5_medium_tile {
+  /*width: 485px;*/
+}
