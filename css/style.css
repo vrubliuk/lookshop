@@ -1015,5 +1015,34 @@ display: flex;
     font-size: 22px;
    line-height: 22px;
 }
+.s5_small_tile {
+  height: 169px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+
+.s5_small_tile:nth-child(2) {
+  background-image: url("../images/5-3.jpg");
+  background-position: center;
+}
+
+.s5_small_tile:nth-child(1) .s5_small_tile_text {
+ 
+}
+.s5_small_tile:nth-child(1) .s5_small_tile_text_line {
+ font-size: 30px;
+}
+
+
+.s5_small_tile:nth-child(3) {
+  background-image: url("../images/5-4.jpg");
+  background-position: left;
+}
+
+
 
 
