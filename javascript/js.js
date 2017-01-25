@@ -1,7 +1,8 @@
 window.onload = function () {
     ResizeOnLoadSection1();
     ResizeOnloadSection2();
-    ResizeOnloadSection4()
+    ResizeOnloadSection4();
+    ResizeOnloadSection5();
 };
 
 
@@ -346,6 +347,36 @@ function ResizeOnloadSection4() {
         $(".s4_left").css("width", "");
          $(".s4_right").css("width", "");
          $(".s4_right").css("margin-bottom", "");
+    }
+    return;
+}
+
+// SECTION 5
+
+window.addEventListener("resize", function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+     
+        $(".s5_left").css("width", "100%");
+       $(".s5_right").css("width", "100%");
+      
+    } else if (w > 640) {
+
+        $(".s5_left").css("width", "");
+         $(".s5_right").css("width", "");
+         
+    }
+});
+
+function ResizeOnloadSection5() {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+         $(".s5_left").css("width", "100%");
+       $(".s5_right").css("width", "100%");
+        
+    } else if (w > 640) {
+            $(".s5_left").css("width", "");
+         $(".s5_right").css("width", "");
     }
     return;
 }
