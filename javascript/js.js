@@ -355,26 +355,27 @@ function ResizeOnloadSection4() {
 
 window.addEventListener("resize", function () {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (w <= 640) {
+    if (w <= 660) {
      
         $(".s5_left").css("width", "100%");
        $(".s5_right").css("width", "100%");
+        $(".s5_right").css("margin-left", "0px");
       
-    } else if (w > 640) {
+    } else if (w > 660) {
 
         $(".s5_left").css("width", "");
          $(".s5_right").css("width", "");
-         
+           $(".s5_right").css("margin-left", "");
     }
 });
 
 function ResizeOnloadSection5() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (w <= 640) {
+    if (w <= 660) {
          $(".s5_left").css("width", "100%");
        $(".s5_right").css("width", "100%");
         
-    } else if (w > 640) {
+    } else if (w > 660) {
             $(".s5_left").css("width", "");
          $(".s5_right").css("width", "");
     }
