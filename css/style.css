@@ -1571,16 +1571,18 @@ font-size: 0;
 /*SECTION 13*/
 .s13_container {
   background-color: black;
+  /*border: solid 1px royalblue;*/
+  
 }
-/*.s13_container::after {
+.s13_container::after {
   content: "";
   clear: both;
   display: table;
-}*/
+}
 
 .s13 {
   position: relative;
-  
+  background-color: black;
   max-width: 972px;
   margin: auto;
   /*padding-top: 20px;
@@ -1600,7 +1602,7 @@ color: #8d8d8d;
 }
 
 .s13_left {
-  float: left;
+float: left;
 height: 32px;
 }
 .s13_menu_icon {
@@ -1616,7 +1618,8 @@ cursor: pointer;
 }
 
 .s13_menu {
-float: left;
+  background-color: black;
+/*float: left;*/
 /*line-height: 32px;*/
 
 }
@@ -1633,13 +1636,15 @@ float: left;
 .s13_menu_item::after {
   content: "|";
   margin-left: 10px;
-  
+
 }
 .s13_menu a:last-child .s13_menu_item::after{
   content: " ";
   
 }
-
+.s13_menu_item.no_after::after {
+  content:none;
+  }
 
 .s13_right {
   text-align: right;
