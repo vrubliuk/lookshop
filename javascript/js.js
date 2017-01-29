@@ -1,9 +1,11 @@
 window.onload = function () {
+    ChangeSlidesAuto();
     ResizeOnLoadSection1();
     ResizeOnloadSection2();
     ResizeOnloadSection4();
     ResizeOnloadSection5();
     ResizeOnLoadSection13();
+
 };
 
 
@@ -323,6 +325,14 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
+function ChangeSlidesAuto() {
+    setInterval(function () {
+        plusSlides(1);
+    }, 3000);
+}
+
+
+
 // SECTION 4
 window.addEventListener("resize", function () {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -436,7 +446,7 @@ function ResizeOnLoadSection13() {
         $(".s13_menu").css("clear", "both");
         $(".s13_left").css("width", "100%");
         $(".s13_menu_item").css("display", "block");
-         $(".s13_menu_item").css("margin-right", "0");
+        $(".s13_menu_item").css("margin-right", "0");
         $('.s13_menu_item').addClass('no_after');
         $(".s13_menu_item").hover(
             function () {
@@ -452,7 +462,7 @@ function ResizeOnLoadSection13() {
         $(".s13_menu_item").css("display", "inline-block");
         $(".s13_menu").css("clear", "");
         $(".s13_left").css("width", "");
-          $(".s13_menu_item").css("margin-right", "");
+        $(".s13_menu_item").css("margin-right", "");
         $('.s13_menu_item').removeClass('no_after');
         $(".s13_menu_item").hover(
             function () {
