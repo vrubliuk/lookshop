@@ -1331,8 +1331,8 @@ height: 395px;
   padding-top: 15px;
  padding-bottom: 15px;
 /*border: solid 1px red;*/
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 0;
 }
@@ -1373,6 +1373,139 @@ height: 395px;
 
 
 /*SECTION 10*/
+.s10 {
+  max-width: 972px;
+  margin: auto;
+  /*padding-top: 15px;
+ padding-bottom: 15px;*/
+/*border: solid 1px red;*/
+  /*margin-top: 20px;*/
+  margin-bottom: 20px;
+  text-align: center;
+;
+}
+
+.s10::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.s10_title {
+font-family: Arial, Helvetica, sans-serif;
+   color: #414141;
+   font-size: 24px;
+font-weight: lighter;
+margin-bottom: 10px;
+}
+
+.s10_text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999999;
+   font-size: 14px;
+  text-align: justify;
+}
+
+
 /*SECTION 11*/
+.s11 {
+  max-width: 1200px;
+  /*margin: auto;*/
+  padding-top: 15px;
+ padding-bottom: 15px;
+/*border: solid 1px red;*/
+  /*margin-top: 20px;*/
+  /*margin-bottom: 20px;*/
+  text-align: center;
+background-color: #f7f7f7;
+font-size: 0;
+
+}
+
+.s11::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.s11_text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999999;
+   font-size: 12px;
+   vertical-align: middle;
+   display: inline-block;
+   margin: 5px;
+}
+.s11_payment_container {
+  display: inline-block;
+   vertical-align: middle;
+}
+
+
+.s11_payment {
+  display: inline-block;
+   vertical-align: middle;
+   position: relative;
+   /*border: solid 1px red;*/
+   height: 22px;
+   width: 34px;
+   overflow: hidden;
+   margin: 5px;
+}
+
+
+.s11_payment:nth-child(1) .s11_payment_pic {
+  left: 0;
+  right: 0;
+position: absolute;
+  clip: rect(0, 34px, 22px, 0);
+
+}
+
+.s11_payment {
+   background-image: url("../images/11-1.png");
+}
+.s11_payment:nth-child(2)  {
+  background-position: -44px 0;
+}
+.s11_payment:nth-child(3)  {
+ background-position: -88px 0;
+}
+.s11_payment:nth-child(4)  {
+ background-position: -132px 0;
+}
+.s11_payment:nth-child(5)  {
+ background-position: -176px 0;
+}
+.s11_payment:nth-child(6)  {
+ background-position: -221px 0;
+}
+.s11_payment:nth-child(7)  {
+ background-position: -265px 0;
+}
+.s11_payment:nth-child(8)  {
+ background-position: -309px 0;
+}
+.s11_payment:nth-child(9)  {
+ background-position: -353px 0;
+}
+.s11_payment:nth-child(10)  {
+ background-position: -397px 0;
+}
+.s11_payment:nth-child(11)  {
+ background-position: -442px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*SECTION 12*/
 /*SECTION 13*/
