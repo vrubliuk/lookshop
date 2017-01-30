@@ -1661,14 +1661,89 @@ cursor: pointer;
 
 
 
+
 /*SECTION 6*/
+
+
+.s6 {
+  background-color: white;
+  max-width: 1002px;
+  margin: auto;
+  text-align: center;
+  font-size: 0;
+}
+
+/*.s6::after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+
+
+.s6_header_mobile {
+  background-color: #fd926d;
+}
+.s6_header_mobile::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.s6_header_mobile_title {
+  float: left;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+.s6_header_mobile_button {
+  float: right;
+  border: none;
+  background-color: #fd926d;
+  cursor: pointer;
+}
+
+.s6_header::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.s6_header_left {
+  float: left;
+  background-color: white;
+  color: black;
+   font-size: 16px;
+  text-transform: uppercase;
+
+}
+.s6_menu {
+  list-style: none;
+}
+.s6_menu_item {
+display: inline-block;
+}
+
+.s6_header_right {
+  float: right;
+}
+
+.s6_header_button {
+  border: none;
+}
+.s6_header_button_left {
+  background-color: grey;
+}
+
+.s6_header_button_right {
+background-color: #fd926d;
+}
+
+
 .s6_mySlides {
   display: none;
   background-color: #fd926d;
 }
-
-
-
 
 
 /*.dot {
@@ -1686,5 +1761,32 @@ cursor: pointer;
 .active,
 .s6_menu_item:hover {
   background-color: #fe926d;
+  color: white;
 }
 
+
+.s6_8_tile:hover .cart_hover {
+  display: block;
+}
+
+
+.cart_hover {
+  position: absolute;
+ top: 100px;
+ left: 0;
+ right: 0;
+ margin: auto;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+.cart_hover img {
+  margin-top: 20px;
+}
