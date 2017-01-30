@@ -1661,5 +1661,30 @@ cursor: pointer;
 
 
 
+/*SECTION 6*/
+.s6_mySlides {
+  display: none;
+  background-color: #fd926d;
+}
 
+
+
+
+
+/*.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 10px;
+  background-color: #867a76;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 14px;
+}*/
+
+.active,
+.s6_menu_item:hover {
+  background-color: #fe926d;
+}
 

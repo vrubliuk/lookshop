@@ -292,7 +292,7 @@ $(document).mouseup(function (e) {
 });
 
 
-// SECTION 3
+// SECTION 3 
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -397,6 +397,38 @@ function ResizeOnloadSection5() {
     return;
 }
 
+// SECTION 6 
+
+var slideIndex6 = 1;
+showSlides6(slideIndex6);
+
+function plusSlides6(n) {
+    showSlides6(slideIndex6 += n);
+}
+
+function currentSlide6(n) {
+    showSlides6(slideIndex6 = n);
+}
+
+function showSlides6(n) {
+    var i;
+    var slides = document.getElementsByClassName("s6_mySlides");
+    var dots = document.getElementsByClassName("s6_menu_item");
+    if (n > slides.length) {
+        slideIndex6 = 1
+    }
+    if (n < 1) {
+        slideIndex6 = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex6 - 1].style.display = "block";
+    dots[slideIndex6 - 1].className += " active";
+}
 
 
 //SECTION 13 
