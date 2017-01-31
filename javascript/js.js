@@ -4,6 +4,7 @@ window.onload = function () {
     ResizeOnloadSection2();
     ResizeOnloadSection4();
     ResizeOnloadSection5();
+    ResizeOnLoadSection6();
     ResizeOnLoadSection13();
 
 };
@@ -74,7 +75,9 @@ $(document).mouseup(function (e) {
 $(".s1_currency_value").click(function () {
     $(".s1_dropdown_content_currency").removeClass("show");
     var currencyValue = $(this).text();
+    var currencySign = currencyValue.charAt(0);
     $(".s1_current_currency").text(currencyValue);
+    $(".s6_8_tile_price_currency").text(currencySign);
 });
 
 // ROLL UP LOGIN FORM WHEN "SING IN" BUTTON IS CLICKED
@@ -429,6 +432,56 @@ function showSlides6(n) {
     slides[slideIndex6 - 1].style.display = "block";
     dots[slideIndex6 - 1].className += " active";
 }
+
+window.addEventListener("resize", function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+       $(".s6_header_mobile").css("display", "block");
+ $(".s6_menu").css("display", "none");
+ $(".s6_header_right").css("display", "none");
+
+
+    } else if (w > 640) {
+        $(".s6_header_mobile").css("display", "");
+        $(".s6_menu").css("display", "");
+ $(".s6_header_right").css("display", "");
+    }
+});
+
+function ResizeOnLoadSection6() {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+        $(".s6_header_mobile").css("display", "block");
+        $(".s6_menu").css("display", "none");
+ $(".s6_header_right").css("display", "none");
+    } else if (w > 640) {
+        $(".s6_header_mobile").css("display", "");
+        $(".s6_menu").css("display", "");
+ $(".s6_header_right").css("display", "");
+    }
+    return;
+}
+
+$(".s6_header_mobile_button").click(function () {
+    var x = $(".s6_menu").css("display");
+    if (x === "none") {
+        document.getElementsByClassName("s6_menu")[0].style.display = "block";
+    } else {
+        document.getElementsByClassName("s6_menu")[0].style.display = "none";
+    }
+});
+
+$(document).mouseup(function (e) {
+    var container1 = $('.s6_menu');
+    var container2 = $('.s6_header_mobile_button');
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (!container1.is(e.target) && container1.has(e.target).length === 0 &&
+        !container2.is(e.target) && container2.has(e.target).length === 0 &&
+        w <= 640) {
+        document.getElementsByClassName("s6_menu")[0].style.display = "none";
+    }
+});
+
 
 
 //SECTION 13 
