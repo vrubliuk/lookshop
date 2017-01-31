@@ -1235,16 +1235,23 @@ margin-left: 5px;
 
 
 .s6_8_tile {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: inline-block;
   position: relative;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
 width: 220px;
 height: 395px;
-/*border: solid 1px red;*/
+border: solid 10px transparent;
+
 }
+
+.s6_8_tile:hover {
+  border: solid 10px #fd926d;
+}
+
+
 
 .s6_8_tile_sale {
   position: absolute;
@@ -1274,6 +1281,7 @@ height: 395px;
 }
 
 .s6_8_tile_text {
+ 
   width: 220px;
   height: 105px;
   background-color: #f7f7f7;
@@ -1671,6 +1679,7 @@ cursor: pointer;
   margin: auto;
   text-align: center;
   font-size: 0;
+  margin-bottom: 15px;
 }
 
 /*.s6::after {
@@ -1680,8 +1689,14 @@ cursor: pointer;
 }*/
 
 
+.s6_header {
+  max-width: 972px;
+    margin: auto;
+}
+
 .s6_header_mobile {
   background-color: #fd926d;
+  display: none;
 }
 .s6_header_mobile::after {
   content: "";
@@ -1712,16 +1727,23 @@ cursor: pointer;
 .s6_header_left {
   float: left;
   background-color: white;
-  color: black;
-   font-size: 16px;
-  text-transform: uppercase;
+ 
+  
 
 }
 .s6_menu {
   list-style: none;
 }
 .s6_menu_item {
+  cursor: pointer;
+  color: #555555;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 46px;
+  font-family: Arial, Helvetica, sans-serif;
 display: inline-block;
+font-size: 15px;
+  text-transform: uppercase;
 }
 
 .s6_header_right {
@@ -1730,20 +1752,42 @@ display: inline-block;
 
 .s6_header_button {
   border: none;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
 }
 .s6_header_button_left {
-  background-color: grey;
+  background-color: #f2f2f2;
 }
 
 .s6_header_button_right {
 background-color: #fd926d;
 }
+.s6_header_button img {
+  vertical-align: middle;
+}
 
 
 .s6_mySlides {
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: none;
   background-color: #fd926d;
+  overflow: hidden;
+  /*height: 425px;*/
+  /*border: solid 1px red;*/
+  position: relative;
 }
+.s6_mySlides_left, .s6_mySlides_right {
+  display: inline-block;
+}
+
+/*.s6_mySlides::after {
+  content: "s";
+  height: 425px;
+  width: 3px;
+  
+}*/
 
 
 /*.dot {
@@ -1758,35 +1802,79 @@ background-color: #fd926d;
   margin-bottom: 14px;
 }*/
 
-.active,
-.s6_menu_item:hover {
+.active {
   background-color: #fe926d;
   color: white;
 }
 
+/*.s6_8_tile:hover .border_hover {
+  display: block;
+}*/
 
-.s6_8_tile:hover .cart_hover {
+
+.s6 .s6_8_tile {
+  border: solid 10px transparent;
+}
+
+.s6 .s6_8_tile:hover {
+  border: solid 10px #f7f7f7;
+
+}
+
+
+
+
+
+
+.s6_8_tile_image_container:hover .cart_hover {
   display: block;
 }
 
 
+/*.border_hover {
+  display: none;
+  position: absolute;
+  border: solid 10px white;
+  width: 220px;
+  top: -10px;
+  left: -10px;
+  background-color: transparent;
+  height: 395px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
 .cart_hover {
   position: absolute;
- top: 100px;
+ top: 80px;
  left: 0;
  right: 0;
  margin: auto;
-  width: 100px;
-  height: 100px;
-  background-color: black;
+  width: 130px;
+  height: 130px;
+  background-color: #3d3d3d;
   color: white;
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: 0;
+
   text-align: center;
   border-radius: 50%;
   display: none;
   cursor: pointer;
 }
 .cart_hover img {
-  margin-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 8px;
+}
+.cart_hover  span {
+   font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+  font-size: 16px;
 }
