@@ -431,20 +431,31 @@ function showSlides6(n) {
     }
     slides[slideIndex6 - 1].style.display = "block";
     dots[slideIndex6 - 1].className += " active";
+    var activeSection = dots[slideIndex6 - 1].innerHTML;
+    $(".s6_header_mobile_title").text(activeSection);
 }
 
 window.addEventListener("resize", function () {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 640) {
-       $(".s6_header_mobile").css("display", "block");
- $(".s6_menu").css("display", "none");
- $(".s6_header_right").css("display", "none");
-
+        $(".s6_header_mobile").css("display", "block");
+        $(".s6_menu").css("display", "none");
+        $(".s6_header_right").css("display", "none");
+        $(".s6_menu_item").css("display", "block");
+        $(".s6_header_left").css("width", "100%");
+        $(".s6_menu").css("margin-top", "10px");
+        $(".s6_menu").css("margin-bottom", "10px");
+        $(".s6_menu_item").css("line-height", "30px");
 
     } else if (w > 640) {
         $(".s6_header_mobile").css("display", "");
         $(".s6_menu").css("display", "");
- $(".s6_header_right").css("display", "");
+        $(".s6_header_right").css("display", "");
+        $(".s6_menu_item").css("display", "");
+        $(".s6_header_left").css("width", "");
+        $(".s6_menu").css("margin-top", "");
+        $(".s6_menu").css("margin-bottom", "");
+        $(".s6_menu_item").css("line-height", "");
     }
 });
 
@@ -453,11 +464,23 @@ function ResizeOnLoadSection6() {
     if (w <= 640) {
         $(".s6_header_mobile").css("display", "block");
         $(".s6_menu").css("display", "none");
- $(".s6_header_right").css("display", "none");
+        $(".s6_header_right").css("display", "none");
+        $(".s6_menu_item").css("display", "block");
+        $(".s6_header_left").css("width", "100%");
+        // $(".active").css("background-color", "#f2f2f2");
+        $(".s6_menu").css("margin-top", "10px");
+        $(".s6_menu").css("margin-bottom", "10px");
+        $(".s6_menu_item").css("line-height", "30px");
     } else if (w > 640) {
         $(".s6_header_mobile").css("display", "");
         $(".s6_menu").css("display", "");
- $(".s6_header_right").css("display", "");
+        $(".s6_header_right").css("display", "");
+        $(".s6_menu_item").css("display", "");
+        $(".s6_header_left").css("width", "");
+        // $(".active").css("background-color", "");
+        $(".s6_menu").css("margin-top", "");
+        $(".s6_menu").css("margin-bottom", "");
+        $(".s6_menu_item").css("line-height", "");
     }
     return;
 }

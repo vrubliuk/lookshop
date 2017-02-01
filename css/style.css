@@ -1061,7 +1061,7 @@ a:hover {
 }
 
 .s6_header_mobile {
-  background-color: #fd926d;
+  background-color: #f4845d;
   display: none;
 }
 
@@ -1085,7 +1085,7 @@ a:hover {
 .s6_header_mobile_button {
   float: right;
   border: none;
-  background-color: #fd926d;
+  background-color: #f4845d;
   cursor: pointer;
   height: 46px;
   width: 46px;
@@ -1162,6 +1162,7 @@ a:hover {
   background-color: #fe926d;
   color: white;
 }
+
 
 .s6 .s6_8_tile {
   border: solid 10px transparent;
