@@ -1,3 +1,3 @@
 Lookshop mock-up
 
-Available soon on: https://vrubliuk.github.io/lookshop/
+Available on: https://vrubliuk.github.io/lookshop/
