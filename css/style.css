@@ -1085,7 +1085,7 @@ a:hover {
 .s6_header_mobile_button {
   float: right;
   border: none;
-  background-color: #f4845d;
+  background-color: transparent;
   cursor: pointer;
   height: 46px;
   width: 46px;
