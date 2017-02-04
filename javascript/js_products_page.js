@@ -604,3 +604,27 @@ $(document).mouseup(function (e) {
     }
 });
 
+
+
+
+// PRODUCT PAGE
+$(".s16_size_selection_button").click(function () {
+    alert('asdas');
+    // if (x === "none") {
+    //     // $(".s16_size_list_container").css("display", "block");
+    //     document.getElementsByClassName("s16_size_list_container")[0].style.display = "block";
+    // } else {
+    //     $(".s16_size_list_container").css("display", "none");
+    // }
+});
+
+// $(document).mouseup(function (e) {
+//     var container1 = $('.s13_menu');
+//     var container2 = $('.s13_menu_icon');
+//     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+//     if (!container1.is(e.target) && container1.has(e.target).length === 0 &&
+//         !container2.is(e.target) && container2.has(e.target).length === 0 &&
+//         w <= 640) {
+//         document.getElementsByClassName("s13_menu")[0].style.display = "none";
+//     }
+// });
