@@ -313,10 +313,10 @@ function showSlides(n) {
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
-        slideIndex = 1
+        slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -418,10 +418,10 @@ function showSlides6(n) {
     var slides = document.getElementsByClassName("s6_mySlides");
     var dots = document.getElementsByClassName("s6_menu_item");
     if (n > slides.length) {
-        slideIndex6 = 1
+        slideIndex6 = 1;
     }
     if (n < 1) {
-        slideIndex6 = slides.length
+        slideIndex6 = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";

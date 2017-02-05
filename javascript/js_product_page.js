@@ -414,8 +414,8 @@ $(document).mouseup(function (e) {
 });
 
 $(".s16_size_list_item").click(function () {
-    var currencySize = $(this).text();
-    $(".s16_current_size").text(currencySize);
+    var currentSize = $(this).text();
+    $(".s16_current_size").text(currentSize);
     $(".s16_size_list_container").css("display", "none");
     $(".s16_current_size").css("text-transform", "uppercase");
     $(".s16_current_size").css("text-align", "center");
