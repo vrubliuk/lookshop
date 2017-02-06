@@ -2568,6 +2568,70 @@ a:hover {
   padding-bottom: 8px;
 }
 
+.s20_category_container {
+  border-bottom: solid 1px #d6d6d6;
+  color: #727272;
+}
+.s20_category_container:last-child {
+  border: none;
+}
+
+
+.s20_category_title {
+   font-size: 12px;
+  
+  height: 26px;
+   line-height: 26px;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+
+.s20_category_title_pic {
+  float: right;
+  margin-top: 10px;
+}
+
+.s20_category_content {
+  padding-bottom: 10px;
+  display: none;
+}
+.s20_category_list a {
+  color: #333333;
+}
+.s20_category_list a:hover {
+  text-decoration: underline;
+}
+
+.s20_category_list_item {
+  font-size: 11px;
+  list-style: none;
+  line-height: 16px;
+}
+
+.s20_category_list_item::before {
+  content: url('../images/productspage/list-style.png');
+ margin-left: 5px;
+ margin-right: 5px;
+}
+
+
+.s20_size_list_item {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 11px;
+  list-style: none;
+  line-height: 31px;
+  text-transform: uppercase;
+  height: 31px;
+  width: 30px;
+  background-color: #f4f4f4;
+  margin-right: 7px;
+}
+
+
+
 .s20_right_container_tile {
   margin-top: 9px;
   height: 110px;

@@ -2,7 +2,7 @@ window.onload = function () {
     ChangeSlidesAuto();
     ResizeOnLoadSection1();
     ResizeOnloadSection2();
-   
+
     ResizeOnLoadSection6();
     ResizeOnLoadSection13();
 
@@ -475,7 +475,7 @@ function currentSlide20(n) {
 }
 
 function showSlides20(n) {
-    
+
     var i;
     var slides = document.getElementsByClassName("s20_mySlides");
     var dots = document.getElementsByClassName("s20_page");
@@ -498,6 +498,38 @@ function showSlides20(n) {
     slides[slideIndex20 - 1].style.display = "block";
     dots[slideIndex20 - 1].className += " s20_pagination_list_item_active";
     dots2[slideIndex20 - 1].className += " s20_pagination_list_item_active";
-    $(".s20_show_results").text( (9*(n-1)+1) + "-" + (9*n));
-    $(".s20_show_whole").text((9*slides.length));
+    $(".s20_show_results").text((9 * (n - 1) + 1) + "-" + (9 * n));
+    $(".s20_show_whole").text((9 * slides.length));
 }
+
+// Right column
+$(".s20_category_title").click(function () {
+    var x = $(this).siblings(".s20_category_content").css("display");
+    if (x === "none") {
+        $(this).siblings(".s20_category_content").css("display", "block");
+        $(this).children(".s20_category_title_pic").attr("src", "images/productspage/20-minus.png");
+        $(this).children(".s20_category_title_pic").css("margin-top", "12px");
+        $(".s20_category_title").not(this).siblings(".s20_category_content").css("display", "none");
+        $(".s20_category_title").not(this).children(".s20_category_title_pic").attr("src", "images/productspage/20-plus.png");
+        $(".s20_category_title").not(this).children(".s20_category_title_pic").css("margin-top", "");
+    } else {
+        $(this).siblings(".s20_category_content").css("display", "none");
+        $(this).children(".s20_category_title_pic").attr("src", "images/productspage/20-plus.png");
+        $(this).children(".s20_category_title_pic").css("margin-top", "");
+    }
+});
+
+
+$(".s20_size_list_item").click(function () {
+    var x = $(this).css("color");
+    if (x === "rgb(114, 114, 114)") {
+        $(this).css('background-color', "#fd926d");
+        $(this).css('color', "white");
+        // To uncheck other sizes:
+        // $(this).siblings(".s20_size_list_item").css('background-color', "");
+        // $(this).siblings(".s20_size_list_item").css('color', "");
+    } else {
+        $(this).css('background-color', "");
+        $(this).css('color', "");
+    }
+});
