@@ -519,7 +519,6 @@ $(".s20_category_title").click(function () {
     }
 });
 
-
 $(".s20_size_list_item").click(function () {
     var x = $(this).css("color");
     if (x === "rgb(114, 114, 114)") {

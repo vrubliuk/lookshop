@@ -17,9 +17,28 @@
   <!--<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">-->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
     <!--<link rel="stylesheet" href="carousel.css">-->
     <link rel="stylesheet" href="css/style.css">
     <!--<link type="text/css" href="scrollbar/jquery.jscrollpane.css" rel="stylesheet" media="all" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <!--jquery slider for price-->
+            <script>
+              $(function () {
+                $("#slider-range").slider({
+                  range: true,
+                  min: 0,
+                  max: 300,
+                  values: [25, 200],
+                  slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  }
+                });
+                $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                  " - $" + $("#slider-range").slider("values", 1));
+              });
+            </script>
 </head>
 
 <body>
@@ -886,7 +905,21 @@
                 </ul>
               </div>
             </div>
-            <div class="s20_category_container">
+            <!--jquery slider for price-->
+    
+            <div class="s20_category_container s20_price_filter">
+              <div id="slider-range"></div>
+              <div class="s20_category_title">
+                 <span class="s20_category_title_text">Price</span>
+                <!--<label for="amount">Price</label>-->
+                <input type="text" id="amount" readonly>
+                <button type="button" class="s20_filter_button" >
+                  <span>filter</span>
+                </button>
+              </div>
+            </div>
+           
+            <div class="s20_category_container s20_size_filter">
               <div class="s20_category_title">
                 <span class="s20_category_title_text">select your size</span>
               </div>
@@ -1145,7 +1178,8 @@
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 					crossorigin="anonymous"></script>-->
   <!--<script type="text/javascript" src="scrollbar/jquery.mousewheel.js"></script>-->
