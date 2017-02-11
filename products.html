@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>LookShop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+					crossorigin="anonymous">-->
+  <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">-->
+  <!--<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">-->
+  <!--<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <!--<link rel="stylesheet" href="carousel.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link type="text/css" href="scrollbar/jquery.jscrollpane.css" rel="stylesheet" media="all" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <!--jquery slider for price-->
+            <script>
+              $(function () {
+                $("#slider-range").slider({
+                  range: true,
+                  min: 0,
+                  max: 300,
+                  values: [25, 200],
+                  slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  }
+                });
+                $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                  " - $" + $("#slider-range").slider("values", 1));
+              });
+            </script>
+</head>
+
+<body>
+  <!--SECTION 1-->
+  <div class="section s1">
+    <div class="s1_container">
+      <div class="s1_left">
+        <button class="s1_phone ">custom care: 888-23-4567</button>
+      </div>
+      <div class="s1_right">
+        <button class="s1_currency s1_dropbtn" onclick="ShowCurrencyList()">
+				<span class="s1_current_currency" >&#36; us</span>
+				<img class="s1_caret" src="images/caret-light.png" alt="">
+		</button>
+        <button class="s1_user s1_dropbtn" onclick="ShowLoginForm()">
+				<img class="s1_user_icon" src="images/1-user-icon.png" alt="">
+				<span class="s1_current_user" >My account</span>
+		</button>
+        <button class="s1_search s1_dropbtn" onclick="ShowSearchForm()">
+			<img class="s1_search_icon" src="images/1-search.png" alt="">
+		</button>
+      </div>
+    </div>
+  </div>
+  <div class=" s1_dropdown_content_currency section ">
+    <ul>
+      <li><a class="s1_currency_value" href="#">&#36; US</a></li>
+      <li><a class="s1_currency_value" href="#">&euro; EU</a></li>
+      <li><a class="s1_currency_value" href="#">&#8372; UA</a></li>
+    </ul>
+  </div>
+  <div class="s1_dropdown_content_user section ">
+    <form action="">
+      <div class="s1_email">
+        <input type="text" name="" value="" placeholder="Email">
+      </div>
+      <div class="s1_password">
+        <input type="text" name="" value="" placeholder="Password">
+      </div>
+      <div class="s1_checkbox">
+        <input type="checkbox"> <label for="">Remember me</label>
+      </div>
+      <button type="submit" class="s1_signin">Sign in</button>
+    </form>
+  </div>
+  <div class="s1_dropdown_content_search section ">
+    <form action="">
+      <div class="s1_search_box">
+        <input type="text" name="" value="" placeholder="Type Here">
+      </div>
+      <button type="submit" class="s1_search_button">Search</button>
+    </form>
+  </div>
+  <!--SECTION 2-->
+  <div class="section2">
+    <div class="s2">
+      <div class="s2_main">
+        <a href="#">
+          <div class="s2_logo_section"></div>
+        </a>
+        <div class="s2_cart">
+          <div class="s2_cart_top">
+            <span>Your cart</span>
+            <img src="images/caret-light.png" alt="">
+          </div>
+          <div class="s2_cart_list">
+            <ul class="s2_cart_item_list">
+              <a href="product.html">
+                <li class="s2_cart_item">Item 1</li>
+              </a>
+              <a href="product.html">
+                <li class="s2_cart_item">Item 2</li>
+              </a>
+              <a href="product.html">
+                <li class="s2_cart_item">Item 3</li>
+              </a>
+              <a href="product.html">
+                <li class="s2_cart_item">Item 4</li>
+              </a>
+              <a href="product.html">
+                <li class="s2_cart_item">Item 5</li>
+              </a>
+            </ul>
+          </div>
+          <div class="s2_cart_bottom">
+            <img src="images/2-shopping-cart.png" alt="">
+            <div class="s2_cart_bottom_right">
+              <div class="s2_cart_total_item">
+                <span class="s2_cart_item_number">0</span>
+                <span class="s2_cart_item_text">items</span>
+              </div>
+              <div class="s2_cart_total_price">
+                <span class="s2_cart_currency">$</span>
+                <span class="s2_cart_price_number">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s2_menu_button">
+          <div class="s2_menu_name">
+            menu
+          </div>
+          <div class="s2_menu_icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="s2_menu">
+          <div class="s2_dropdown">
+            <div class="s2_dropbtn_container">
+              <button class="s2_dropbtn">new</button>
+              <img src="images/caret-dark.png" alt="">
+            </div>
+            <div class="s2_dropdown_content">
+              <a href="">Item 1</a>
+              <a href="">Item 2</a>
+              <a href="">Item 3</a>
+              <a href="">Item 4</a>
+              <a href="">Item 5</a>
+            </div>
+          </div>
+          <div class="s2_dropdown">
+            <div class="s2_dropbtn_container">
+              <button class="s2_dropbtn">designers</button>
+              <img src="images/caret-dark.png" alt="">
+            </div>
+            <div class="s2_dropdown_content">
+              <a href="">Item 1</a>
+              <a href="">Item 2</a>
+              <a href="">Item 3</a>
+              <a href="">Item 4</a>
+            </div>
+          </div>
+          <div class="s2_dropdown">
+            <div class="s2_dropbtn_container">
+              <button class="s2_dropbtn">women</button>
+              <img src="images/caret-dark.png" alt="">
+            </div>
+            <div class="s2_dropdown_content">
+              <a href="">Item 1</a>
+              <a href="">Item 2</a>
+              <a href="">Item 3</a>
+            </div>
+          </div>
+          <div class="s2_dropdown">
+            <div class="s2_dropbtn_container">
+              <button class="s2_dropbtn">men</button>
+              <img src="images/caret-dark.png" alt="">
+            </div>
+            <div class="s2_dropdown_content">
+              <a href="">Item 1</a>
+              <a href="">Item 2</a>
+              <a href="">Item 3</a>
+              <a href="">Item 4</a>
+            </div>
+          </div>
+          <div class="s2_dropdown">
+            <div class="s2_dropbtn_container">
+              <button class="s2_dropbtn">clearance</button>
+              <img src="images/caret-dark.png" alt="">
+            </div>
+            <div class="s2_dropdown_content">
+              <a href="">Item 1</a>
+              <a href="">Item 2</a>
+              <a href="">Item 3</a>
+              <a href="">Item 4</a>
+              <a href="">Item 5</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--SECTION 15-->
+  <div class="section">
+    <div class="s15_products_page">
+      <hr class="s15_line1">
+      <ul class="s15_breadcrumbs">
+        <li class="s15_breadcrumbs_item">
+          <a href="index.html">
+            <img src="images/productpage/home-icon.png" alt="" class="s15_home_icon"> </a>
+        </li>
+        <li class="s15_breadcrumbs_item"><a href="#">Women</a></li>
+        <li class="s15_breadcrumbs_item"><a href="#"> Clothes</a></li>
+      </ul>
+      <hr class="s15_line2">
+    </div>
+  </div>
+  <!--SECTION 19-->
+  <div class="section s19">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="slide_text_container s19_slide_text_container">
+          <div class="slide_text s19_slide_text ">
+           <a href="product.html"> <h3 class="s19_product_name">Open Heart Top</h3> </a>
+            <div class="s19_price">
+              <span class="s19_price_currency">$</span>
+              <span class="s19_price_number">13.95</span>
+            </div>
+            <p class="s19_product_description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+              lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet
+              nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor
+              a ornare odio.</p>
+            <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+					</button>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="slide_text_container s19_slide_text_container">
+          <div class="slide_text s19_slide_text">
+           <a href="product.html"> <h3 class="s19_product_name">Open Black Top</h3> </a>
+            <div class="s19_price">
+              <span class="s19_price_currency">$</span>
+              <span class="s19_price_number">24.99</span>
+            </div>
+            <p class="s19_product_description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+              lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet
+              nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor
+              a ornare odio.</p>
+            <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+								<img src="images/button-plus.png" alt="">
+					</button>
+          </div>
+        </div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </div>
+  <!--SECTION 20-->
+  <div class="section">
+    <div class="s20">
+      <div class="s20_left">
+        <div class="s20_sort_pagination">
+          <div class="s20_sort_container">
+            <div class="s20_sort_container_text">Sort by</div>
+            <div class="s20_sort">
+              <div class="s20_sort_selection">
+                <div class="s20_current_sort">Date</div>
+                <button class="s20_sort_selection_button">
+                  <img src="images/productpage/down-icon.png" alt=""> 
+                </button>
+              </div>
+              <div class="s20_sort_list_container">
+                <ul class="s20_sort_list">
+                  <li class="s20_sort_list_item">Date</li>
+                  <li class="s20_sort_list_item">Price</li>
+                  <li class="s20_sort_list_item">Popularity</li>
+                  <li class="s20_sort_list_item">Rating</li>
+                  <li class="s20_sort_list_item">Brand</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="s20_pagination_container">
+            <div class="s20_pagination_container_text">
+              <span class="s20_pagination_container_text_item">Showing</span>
+              <span class="s20_pagination_container_text_item s20_show_results "></span>
+              <span class="s20_pagination_container_text_item">of</span>
+              <span class="s20_pagination_container_text_item s20_show_whole"></span>
+              <span class="s20_pagination_container_text_item">results</span>
+            </div>
+            <div class="s20_pagination_list_container">
+              <ul class="s20_pagination_list">
+                <li class="s20_pagination_list_item" onclick="plusSlides20(-1)">
+                  <img src="images/productspage/pagination-arrow-left.png" alt="">
+                </li>
+                <li class="s20_pagination_list_item s20_page" onclick="currentSlide20(1)">1</li>
+                <li class="s20_pagination_list_item s20_page" onclick="currentSlide20(2)">2</li>
+                <li class="s20_pagination_list_item" onclick="plusSlides20(1)">
+                  <img src="images/productspage/pagination-arrow-right.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--PRODUCTS-->
+        <!--SLIDE 1-->
+        <div class="s20_mySlides">
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-1.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">mimosa lace dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">76.95</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+              
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-2.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">feel tank</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">59.95</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+            
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-3.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">hot shorts</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">35.95</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+            
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-4.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">petrol sweater</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">21.50</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+              
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-5.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">zebra dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">84.99</span>
+              </p>
+              <br>
+             <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-6.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">wishvitalise dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">96.55</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+            
+            </div>
+          </div>
+          <div class="s6_8_tile fade">
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-7.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">nadia dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">64.95</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade">
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-8.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">gooding shorts</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">79.95</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/productspage/20-9.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">lily dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">76.99</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+              
+            </div>
+          </div>
+        </div>
+        <!--SLIDE 2-->
+        <div class="s20_mySlides">
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_image_container">
+              <img src="images/6-1.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">mimosa lace dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">76.95</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/6-2.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">feel tank</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">59.95</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_image_container">
+              <img src="images/6-3.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">hot shorts</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">35.95</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+              
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/6-4.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">petrol sweater</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">21.50</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_image_container">
+              <img src="images/6-5.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">zebra dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">84.99</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade ">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/6-6.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">wishvitalise dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">96.55</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade">
+            <div class="s6_8_tile_image_container">
+              <img src="images/8-1.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">nadia dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">64.95</span>
+              </p>
+              <br>
+              <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+            
+            </div>
+          </div>
+          <div class="s6_8_tile fade">
+            <div class="s6_8_tile_image_container">
+              <img src="images/8-3.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">gooding shorts</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">79.95</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+             
+            </div>
+          </div>
+          <div class="s6_8_tile fade">
+            <div class="s6_8_tile_sale">
+              <div class="s6_8_tile_sale_bg"></div>
+              <span class="s6_8_tile_sale_text">sale</span>
+            </div>
+            <div class="s6_8_tile_image_container">
+              <img src="images/8-4.jpg" alt="" class="s6_8_tile_image">
+              <a href="product.html">
+                <div class="cart_hover">
+                  <img src="images/6-cart.png" alt="">
+                  <br>
+                  <span>shop it</span>
+                </div>
+              </a>
+            </div>
+            <div class="s6_8_tile_text">
+              <p class="s6_8_tile_name">lily dress</p>
+              <p class="s6_8_tile_price">
+                <span class="s6_8_tile_price_currency">$</span>
+                <span class="s6_8_tile_price_number">76.99</span>
+              </p>
+              <br>
+               <button type="text" class="add_to_cart_button">
+								<span>add to cart</span>
+									<img src="images/button-plus.png" alt="">
+							</button>
+  
+            </div>
+          </div>
+        </div>
+        <div class="s20_sort_pagination s20_sort_pagination_bottom">
+          <div class="s20_pagination_container">
+            <div class="s20_pagination_container_text">
+              <span class="s20_pagination_container_text_item">Showing</span>
+              <span class="s20_pagination_container_text_item s20_show_results "></span>
+              <span class="s20_pagination_container_text_item">of</span>
+              <span class="s20_pagination_container_text_item s20_show_whole"></span>
+              <span class="s20_pagination_container_text_item">results</span>
+            </div>
+            <div class="s20_pagination_list_container">
+              <ul class="s20_pagination_list">
+                <li class="s20_pagination_list_item" onclick="plusSlides20(-1)">
+                  <img src="images/productspage/pagination-arrow-left.png" alt="">
+                </li>
+                <li class="s20_pagination_list_item s20_page2" onclick="currentSlide20(1)">1</li>
+                <li class="s20_pagination_list_item s20_page2" onclick="currentSlide20(2)">2</li>
+                <li class="s20_pagination_list_item" onclick="plusSlides20(1)">
+                  <img src="images/productspage/pagination-arrow-right.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s20_right">
+        <div class="s20_right_container">
+          <div class="s20_right_container_title">categories</div>
+          <div class="s20_right_container_body">
+            <div class="s20_category_container">
+              <div class="s20_category_title">
+                <span class="s20_category_title_text">new</span>
+                <img src="images/productspage/20-plus.png" alt="" class="s20_category_title_pic">
+              </div>
+              <div class="s20_category_content">
+                <ul class="s20_category_list">
+                  <li class="s20_category_list_item"><a href="#">Clothes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Shoes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Accessories</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="s20_category_container">
+              <div class="s20_category_title">
+                <span class="s20_category_title_text">designers</span>
+                <img src="images/productspage/20-plus.png" alt="" class="s20_category_title_pic">
+              </div>
+              <div class="s20_category_content">
+                <ul class="s20_category_list">
+                  <li class="s20_category_list_item"><a href="#">Clothes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Shoes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Accessories</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="s20_category_container">
+              <div class="s20_category_title">
+                <span class="s20_category_title_text">women</span>
+                <img src="images/productspage/20-plus.png" alt="" class="s20_category_title_pic">
+              </div>
+              <div class="s20_category_content">
+                <ul class="s20_category_list">
+                  <li class="s20_category_list_item"><a href="#">Clothes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Shoes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Accessories</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="s20_category_container">
+              <div class="s20_category_title">
+                <span class="s20_category_title_text">men</span>
+                <img src="images/productspage/20-plus.png" alt="" class="s20_category_title_pic">
+              </div>
+              <div class="s20_category_content">
+                <ul class="s20_category_list">
+                  <li class="s20_category_list_item"><a href="#">Clothes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Shoes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Accessories</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="s20_category_container">
+              <div class="s20_category_title">
+                <span class="s20_category_title_text">clearance</span>
+                <img src="images/productspage/20-plus.png" alt="" class="s20_category_title_pic">
+              </div>
+              <div class="s20_category_content">
+                <ul class="s20_category_list">
+                  <li class="s20_category_list_item"><a href="#">Clothes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Shoes</a></li>
+                  <li class="s20_category_list_item"><a href="#">Accessories</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--jquery slider for price-->
+    
+            <div class="s20_category_container s20_price_filter">
+              <div id="slider-range"></div>
+              <div class="s20_category_title">
+                 <span class="s20_category_title_text">Price</span>
+          
+                <input type="text" id="amount" readonly>
+                <button type="button" class="s20_filter_button" >
+                  <span>filter</span>
+                </button>
+              </div>
+            </div>
+           
+            <div class="s20_category_container s20_size_filter">
+              <div class="s20_category_title">
+                <span class="s20_category_title_text">select your size</span>
+              </div>
+              <ul class="s20_size_list">
+                <li class="s20_size_list_item">xs</li>
+                <li class="s20_size_list_item">s</li>
+                <li class="s20_size_list_item">m</li>
+                <li class="s20_size_list_item">l</li>
+                <li class="s20_size_list_item">xl</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="s20_right_container">
+          <div class="s20_right_container_title">on sale</div>
+          <div class="s20_right_container_body">
+            <div class="s20_right_container_tile">
+              <a href="product.html">
+                <img src="images/productspage/20-10.jpg" alt="" class="s20_right_container_tile_pic">
+                <h4 class="s20_right_container_tile_name">pintuck tank</h4>
+              </a>
+              <p class="s20_right_container_tile_price">
+                <span class="s20_right_container_tile_price_currency">$</span>
+                <span class="s20_right_container_tile_price_number">45.55</span>
+              </p>
+            </div>
+            <div class="s20_right_container_tile">
+              <a href="product.html">
+                <img src="images/productspage/20-11.jpg" alt="" class="s20_right_container_tile_pic">
+                <h4 class="s20_right_container_tile_name">folicia silk shirt</h4>
+              </a>
+              <p class="s20_right_container_tile_price">
+                <span class="s20_right_container_tile_price_currency">$</span>
+                <span class="s20_right_container_tile_price_number">69.49</span>
+              </p>
+            </div>
+            <div class="s20_right_container_tile">
+              <a href="product.html">
+                <img src="images/productspage/20-12.jpg" alt="" class="s20_right_container_tile_pic">
+                <h4 class="s20_right_container_tile_name">laylala shirt</h4>
+              </a>
+              <p class="s20_right_container_tile_price">
+                <span class="s20_right_container_tile_price_currency">$</span>
+                <span class="s20_right_container_tile_price_number">78.25</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="s20_right_container">
+          <div class="s20_right_container_title">featured products</div>
+          <div class="s20_right_container_body">
+            <div class="s20_right_container_tile">
+              <a href="product.html">
+                <img src="images/productspage/20-13.jpg" alt="" class="s20_right_container_tile_pic">
+                <h4 class="s20_right_container_tile_name">basic sunglasses</h4>
+              </a>
+              <p class="s20_right_container_tile_price">
+                <span class="s20_right_container_tile_price_currency">$</span>
+                <span class="s20_right_container_tile_price_number">14.95</span>
+              </p>
+            </div>
+            <div class="s20_right_container_tile">
+              <a href="product.html">
+                <img src="images/productspage/20-14.jpg" alt="" class="s20_right_container_tile_pic">
+                <h4 class="s20_right_container_tile_name">billie j</h4>
+              </a>
+              <p class="s20_right_container_tile_price">
+                <span class="s20_right_container_tile_price_currency">$</span>
+                <span class="s20_right_container_tile_price_number">69.49</span>
+              </p>
+            </div>
+            <div class="s20_right_container_tile">
+              <a href="product.html">
+                <img src="images/productspage/20-15.jpg" alt="" class="s20_right_container_tile_pic">
+                <h4 class="s20_right_container_tile_name">sandie shopperbag</h4>
+              </a>
+              <p class="s20_right_container_tile_price">
+                <span class="s20_right_container_tile_price_currency">$</span>
+                <span class="s20_right_container_tile_price_number">69.95</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--SECTION 11-->
+  <div class="section">
+    <div class="s11">
+      <div class="s11_text">We accept</div>
+      <div class="s11_payment_container">
+        <div class="s11_payment">
+          <img src="images/11-1.png" alt="" class="s11_payment_pic">
+        </div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+        <div class="s11_payment"></div>
+      </div>
+    </div>
+  </div>
+  <!--SECTION 12-->
+  <div class="section">
+    <div class="s12">
+      <div class="s12_column">
+        <h5 class="s12_column_title">Customer Service</h5>
+        <ul class="s12_column_list">
+          <a href="#">
+            <li class="s12_column_list_item">Contact</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">FAQ</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Terms of payment</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Terms of sale</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Delivery terms and conditions</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Rerurns and refunds</li>
+          </a>
+        </ul>
+      </div>
+      <div class="s12_column">
+        <h5 class="s12_column_title">Information</h5>
+        <ul class="s12_column_list">
+          <a href="#">
+            <li class="s12_column_list_item">Affiliate</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Cookies</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">How to Shop</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">About Nelly</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Investor relations</li>
+          </a>
+        </ul>
+      </div>
+      <div class="s12_column">
+        <h5 class="s12_column_title">Campaigns</h5>
+        <ul class="s12_column_list">
+          <a href="#">
+            <li class="s12_column_list_item">Evening dresses</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Makeup</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Fashion forward</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Training clothes</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Special Occasion Dresses</li>
+          </a>
+        </ul>
+      </div>
+      <div class="s12_column">
+        <h5 class="s12_column_title">Stores</h5>
+        <ul class="s12_column_list">
+          <a href="#">
+            <li class="s12_column_list_item">Paris</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">New York</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">London</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Madrid</li>
+          </a>
+          <a href="#">
+            <li class="s12_column_list_item">Tokio</li>
+          </a>
+        </ul>
+      </div>
+      <div class="s12_column">
+        <h5 class="s12_column_title">Social</h5>
+        <table>
+          <tr>
+            <td>
+              <a href="#"> <img src="images/12-1.png" alt=""> </a>
+            </td>
+            <td>
+              <a href="#"> <img src="images/12-2.png" alt=""></a>
+            </td>
+            <td>
+              <a href="#"><img src="images/12-3.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><img src="images/12-4.png" alt=""></a>
+            </td>
+            <td>
+              <a href="#"><img src="images/12-5.png" alt=""></a>
+            </td>
+            <td>
+              <a href="#"><img src="images/12-6.png" alt=""></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="s12_column">
+        <p class="s12_last_column_line1">100%</p>
+        <p class="s12_last_column_line2">secured</p>
+      </div>
+    </div>
+  </div>
+  <!--SECTION 13-->
+  <div class="section s13_container">
+    <div class="s13">
+      <div class="s13_left">
+        <div class="s13_menu_icon">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="s13_menu">
+          <ul>
+            <a href="#">
+              <li class="s13_menu_item">Privacy & Cookies</li>
+            </a>
+            <a href="#">
+              <li class="s13_menu_item">Terms & Conditions</li>
+            </a>
+            <a href="#">
+              <li class="s13_menu_item">Accessibility</li>
+            </a>
+            <a href="#">
+              <li class="s13_menu_item">Store Directory</li>
+            </a>
+            <a href="#">
+              <li class="s13_menu_item">About Us</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="s13_right">
+        <p class="s13_copyright">© LookShop.com<br>All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+					crossorigin="anonymous"></script>-->
+  <!--<script type="text/javascript" src="scrollbar/jquery.mousewheel.js"></script>-->
+  <!--<script type="text/javascript" src="scrollbar/jquery.jscrollpane.min.js"></script>-->
+  <!--<script type="text/javascript" src="bootstrap.min.js"></script>-->
+  <script src="javascript/js_products_page.js" type="text/javascript"></script>
+</body>
+
+</html>

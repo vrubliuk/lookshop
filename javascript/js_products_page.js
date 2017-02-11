@@ -2,17 +2,15 @@ window.onload = function () {
     ChangeSlidesAuto();
     ResizeOnLoadSection1();
     ResizeOnloadSection2();
-
-    ResizeOnLoadSection6();
     ResizeOnLoadSection13();
-
+    ResizeOnLoadSection19();
+    ResizeOnLoadSection201();
+    ResizeOnLoadSection202();
 };
 
 
 // SECTION 1
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function ShowCurrencyList() {
     var x = document.getElementsByClassName("s1_dropdown_content_currency")[0].classList.contains("show");
     if (x !== true) {
@@ -77,6 +75,8 @@ $(".s1_currency_value").click(function () {
     var currencySign = currencyValue.charAt(0);
     $(".s1_current_currency").text(currencyValue);
     $(".s6_8_tile_price_currency").text(currencySign);
+    $(".s19_price_currency").text(currencySign);
+    $(".s20_right_container_tile_price_currency").text(currencySign);
 });
 
 // ROLL UP LOGIN FORM WHEN "SING IN" BUTTON IS CLICKED
@@ -431,10 +431,92 @@ $(document).mouseup(function (e) {
     }
 });
 
-
 // PRODUCTS PAGE
 
+// SECTION 19
+window.addEventListener("resize", function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+        $(".s19_slide_text_container").css("text-align", "center");
+  $(".s19_slide_text").css("margin-right", "auto");
+ $(".s19_slide_text").css("padding-left", "35px");
+ $(".s19_slide_text").css("padding-right", "35px");
+// $(".s19_product_description").css("background-color", "white");
+        
+
+    } else if (w > 640) {
+        $(".s19_slide_text_container").css("text-align", "");
+        $(".s19_slide_text").css("margin-right", "");
+$(".s19_slide_text").css("padding-left", "");
+ $(".s19_slide_text").css("padding-right", "");
+//  $(".s19_product_description").css("background-color", "");
+//         $(".s19_slide_text").css("margin-right", "");
+//   $(".s19_slide_text").css("margin-left", "");
+    }
+});
+
+function ResizeOnLoadSection19() {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 640) {
+        $(".s19_slide_text_container").css("text-align", "center");
+  $(".s19_slide_text").css("margin-right", "auto");
+ $(".s19_slide_text").css("padding-left", "35px");
+ $(".s19_slide_text").css("padding-right", "35px");
+    } else if (w > 640) {
+       $(".s19_slide_text_container").css("text-align", "");
+        $(".s19_slide_text").css("margin-right", "");
+$(".s19_slide_text").css("padding-left", "");
+ $(".s19_slide_text").css("padding-right", "");
+    }
+    return;
+}
+
+
+
 // SECTION 20
+
+window.addEventListener("resize", function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 450) {
+        $(".s20_sort_container").css("float", "none");
+        $(".s20_pagination_container").css("float", "none");
+    } else if (w > 450) {
+        $(".s20_sort_container").css("float", "");
+         $(".s20_pagination_container").css("float", "");
+    }
+});
+window.addEventListener("resize", function () {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 1050) {
+        $(".s20_right").css("display", "none");
+    } else if (w > 1050) {
+        $(".s20_right").css("display", "");
+    }
+});
+
+function ResizeOnLoadSection201() {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 450) {
+         $(".s20_sort_container").css("float", "none");
+        $(".s20_pagination_container").css("float", "none");
+    } else if (w > 450) {
+        $(".s20_sort_container").css("float", "");
+         $(".s20_pagination_container").css("float", "");
+    }
+    return;
+}
+function ResizeOnLoadSection202() {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 1050) {
+         $(".s20_right").css("display", "none");
+    } else if (w > 1050) {
+        $(".s20_right").css("display", "");
+    }
+    return;
+}
+
+
+
 
 $(".s20_sort_selection_button").click(function () {
     var x = $(".s20_sort_list_container").css("display");

@@ -2318,11 +2318,11 @@ a:hover {
   top: 157px;
 }
 
-.s19 .slide_text_container {
-  text-align: left;
+.s19_slide_text_container {
+   text-align: left;
 }
 
-.s19 .slide_text {
+.s19_slide_text {
   width: 320px;
   margin-left: auto;
   margin-right: 60px;
@@ -2495,9 +2495,12 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #4d4d4d;
-  height: 31px;
+  /*height: 31px;*/
   line-height: 31px;
 }
+
+
+
 
 .s20_pagination_container_text {
   display: inline-block;
@@ -2511,6 +2514,8 @@ a:hover {
 .s20_pagination_list_container {
   display: inline-block;
 }
+
+
 
 .s20_pagination_list {
   list-style: none;
@@ -2622,6 +2627,7 @@ border: none;
  background-color: #e5e5e5;
  height: 5px;
  border-radius: 0;
+ margin-bottom: 11px;
 
 }
 #slider-range > div {
@@ -2640,7 +2646,9 @@ border: none;
     box-shadow: 0px 2px #dd6b44;
     box-sizing: border-box;
 }
-
+#slider-range > span:nth-child(2) {
+  margin-left: 0;
+}
 
 .s20_price_filter {
   margin-top: 25px;
@@ -2677,7 +2685,9 @@ border: none;
 .s20_filter_button span {
   vertical-align: middle;
 }
-
+.s20_size_list {
+  margin-top: 5px;
+}
 
 .s20_size_list_item {
   cursor: pointer;

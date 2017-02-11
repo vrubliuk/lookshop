@@ -1,19 +1,15 @@
 window.onload = function () {
-    ChangeSlidesAuto();
+   
     ResizeOnLoadSection1();
     ResizeOnloadSection2();
-    // ResizeOnloadSection4();
-    // ResizeOnloadSection5();
-    // ResizeOnLoadSection6();
     ResizeOnLoadSection13();
+   
 
 };
 
 
 // SECTION 1
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function ShowCurrencyList() {
     var x = document.getElementsByClassName("s1_dropdown_content_currency")[0].classList.contains("show");
     if (x !== true) {
