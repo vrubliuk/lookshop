@@ -1,14 +1,17 @@
-$(document).ready(function() {
-   ResizeOnLoadSection1(); 
+$(document).ready(function () {
+    $(".preloader").fadeOut(2000);
 });
-$(document).ready(function() {
-   ResizeOnLoadSection2();
+$(document).ready(function () {
+    ResizeOnLoadSection1();
 });
-$(document).ready(function() {
+$(document).ready(function () {
+    ResizeOnLoadSection2();
+});
+$(document).ready(function () {
     ResizeOnLoadSection8();
 });
-$(document).ready(function() {
-   ResizeOnLoadSection13();
+$(document).ready(function () {
+    ResizeOnLoadSection13();
 });
 
 // SECTION 1
@@ -234,7 +237,7 @@ window.addEventListener("resize", function () {
 function ResizeOnLoadSection2() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 880) {
-        
+
         document.getElementsByClassName("s2_menu")[0].style.display = "none";
         document.getElementsByClassName("s2_menu_button")[0].style.display = "block";
         document.getElementsByClassName("section2")[0].style.height = "174px";
@@ -257,7 +260,7 @@ function ResizeOnLoadSection2() {
         $(".s2_cart").css("width", "100%");
         $(".s2").css("padding-top", "0px");
     } else if (w > 880) {
-       
+
         document.getElementsByClassName("s2_menu")[0].style.display = "block";
         document.getElementsByClassName("s2_menu_button")[0].style.display = "none";
         document.getElementsByClassName("section2")[0].style.height = "104px";
@@ -318,8 +321,8 @@ function ResizeOnLoadSection8() {
 }
 
 $(".load_more_button").click(function () {
-   $(".s8").css("height", "auto");
-   $(".load_more_button").css("display", "none");
+    $(".s8").css("height", "auto");
+    $(".load_more_button").css("display", "none");
 });
 
 
@@ -452,8 +455,6 @@ $(".s16_size_list_item").click(function () {
 $(".s16_color_list_item").click(function () {
     $(this).css('border', "solid 2px #6a6a6a");
     $(this).siblings(".s16_color_list_item").css('border', "none");
-    // $(".s2_dropbtn_container").not(this).siblings('.s2_dropdown_content').removeClass("show");
-    
 });
 
 $(".s16_quantity_plus_button").click(function () {
@@ -469,7 +470,6 @@ $(".s16_quantity_minus_button").click(function () {
         $(".s16_quantity_number").text(newNumber);
     }
 });
-
 
 // SECTION 18
 

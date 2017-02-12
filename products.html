@@ -10,38 +10,34 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-					crossorigin="anonymous">-->
-  <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">-->
-  <!--<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">-->
-  <!--<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">-->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-    <!--<link rel="stylesheet" href="carousel.css">-->
-    <link rel="stylesheet" href="css/style.css">
-    <!--<link type="text/css" href="scrollbar/jquery.jscrollpane.css" rel="stylesheet" media="all" />-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-    <!--jquery slider for price-->
-            <script>
-              $(function () {
-                $("#slider-range").slider({
-                  range: true,
-                  min: 0,
-                  max: 300,
-                  values: [25, 200],
-                  slide: function (event, ui) {
-                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-                  }
-                });
-                $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-                  " - $" + $("#slider-range").slider("values", 1));
-              });
-            </script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--jquery slider for price-->
+  <script>
+    $(function () {
+      $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 300,
+        values: [25, 200],
+        slide: function (event, ui) {
+          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+      });
+      $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+        " - $" + $("#slider-range").slider("values", 1));
+    });
+  </script>
 </head>
 
 <body>
+  <!--PRELOADER-->
+  <div class="preloader">
+    <img src="images/preloader.gif">
+  </div>
   <!--SECTION 1-->
   <div class="section s1">
     <div class="s1_container">
@@ -232,7 +228,9 @@
       <div class="mySlides fade">
         <div class="slide_text_container s19_slide_text_container">
           <div class="slide_text s19_slide_text ">
-           <a href="product.html"> <h3 class="s19_product_name">Open Heart Top</h3> </a>
+            <a href="product.html">
+              <h3 class="s19_product_name">Open Heart Top</h3>
+            </a>
             <div class="s19_price">
               <span class="s19_price_currency">$</span>
               <span class="s19_price_number">13.95</span>
@@ -251,7 +249,9 @@
       <div class="mySlides fade">
         <div class="slide_text_container s19_slide_text_container">
           <div class="slide_text s19_slide_text">
-           <a href="product.html"> <h3 class="s19_product_name">Open Black Top</h3> </a>
+            <a href="product.html">
+              <h3 class="s19_product_name">Open Black Top</h3>
+            </a>
             <div class="s19_price">
               <span class="s19_price_currency">$</span>
               <span class="s19_price_number">24.99</span>
@@ -344,11 +344,10 @@
                 <span class="s6_8_tile_price_number">76.95</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-              
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -373,11 +372,10 @@
                 <span class="s6_8_tile_price_number">59.95</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-            
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -402,7 +400,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-            
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -427,11 +424,10 @@
                 <span class="s6_8_tile_price_number">21.50</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-              
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -452,11 +448,10 @@
                 <span class="s6_8_tile_price_number">84.99</span>
               </p>
               <br>
-             <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -485,7 +480,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-            
             </div>
           </div>
           <div class="s6_8_tile fade">
@@ -510,7 +504,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade">
@@ -535,7 +528,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade">
@@ -560,11 +552,10 @@
                 <span class="s6_8_tile_price_number">76.99</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-              
             </div>
           </div>
         </div>
@@ -588,11 +579,10 @@
                 <span class="s6_8_tile_price_number">76.95</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -621,7 +611,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -646,7 +635,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-              
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -671,11 +659,10 @@
                 <span class="s6_8_tile_price_number">21.50</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -700,7 +687,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade ">
@@ -725,11 +711,10 @@
                 <span class="s6_8_tile_price_number">96.55</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade">
@@ -754,7 +739,6 @@
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-            
             </div>
           </div>
           <div class="s6_8_tile fade">
@@ -775,11 +759,10 @@
                 <span class="s6_8_tile_price_number">79.95</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-             
             </div>
           </div>
           <div class="s6_8_tile fade">
@@ -804,11 +787,10 @@
                 <span class="s6_8_tile_price_number">76.99</span>
               </p>
               <br>
-               <button type="text" class="add_to_cart_button">
+              <button type="text" class="add_to_cart_button">
 								<span>add to cart</span>
 									<img src="images/button-plus.png" alt="">
 							</button>
-  
             </div>
           </div>
         </div>
@@ -906,19 +888,16 @@
               </div>
             </div>
             <!--jquery slider for price-->
-    
             <div class="s20_category_container s20_price_filter">
               <div id="slider-range"></div>
               <div class="s20_category_title">
-                 <span class="s20_category_title_text">Price</span>
-          
+                <span class="s20_category_title_text">Price</span>
                 <input type="text" id="amount" readonly>
-                <button type="button" class="s20_filter_button" >
+                <button type="button" class="s20_filter_button">
                   <span>filter</span>
                 </button>
               </div>
             </div>
-           
             <div class="s20_category_container s20_size_filter">
               <div class="s20_category_title">
                 <span class="s20_category_title_text">select your size</span>
@@ -1179,12 +1158,6 @@
     </div>
   </div>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
-  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-					crossorigin="anonymous"></script>-->
-  <!--<script type="text/javascript" src="scrollbar/jquery.mousewheel.js"></script>-->
-  <!--<script type="text/javascript" src="scrollbar/jquery.jscrollpane.min.js"></script>-->
-  <!--<script type="text/javascript" src="bootstrap.min.js"></script>-->
   <script src="javascript/js_products_page.js" type="text/javascript"></script>
 </body>
 

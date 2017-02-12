@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $(".preloader").fadeOut(2000);
+});
+$(document).ready(function () {
     ChangeSlidesAuto();
 });
 $(document).ready(function () {
@@ -483,7 +486,7 @@ function ResizeOnLoadSection6() {
         $(".s6_header_right").css("display", "none");
         $(".s6_menu_item").css("display", "block");
         $(".s6_header_left").css("width", "100%");
-        // $(".active").css("background-color", "#f2f2f2");
+
         $(".s6_menu").css("margin-top", "10px");
         $(".s6_menu").css("margin-bottom", "10px");
         $(".s6_menu_item").css("line-height", "30px");
@@ -493,7 +496,7 @@ function ResizeOnLoadSection6() {
         $(".s6_header_right").css("display", "");
         $(".s6_menu_item").css("display", "");
         $(".s6_header_left").css("width", "");
-        // $(".active").css("background-color", "");
+
         $(".s6_menu").css("margin-top", "");
         $(".s6_menu").css("margin-bottom", "");
         $(".s6_menu_item").css("line-height", "");
@@ -538,10 +541,10 @@ function ResizeOnLoadSection61() {
     var element = document.getElementsByClassName("s6_slides_container")[0];
     if (element.offsetHeight < element.scrollHeight) {
         $(".s6_slides_container").siblings('.s6_load_more_button_container').css("display", "block");
-      $(".s6_slides_container").siblings('.s6_load_more_button_container').children(".load_more_button").css("display", "inline-block");
+        $(".s6_slides_container").siblings('.s6_load_more_button_container').children(".load_more_button").css("display", "inline-block");
     } else {
         $(".s6_slides_container").siblings('.s6_load_more_button_container').css("display", "");
-     $(".s6_slides_container").siblings('.s6_load_more_button_container').children(".load_more_button").css("display", "");
+        $(".s6_slides_container").siblings('.s6_load_more_button_container').children(".load_more_button").css("display", "");
     }
     return;
 }
@@ -560,21 +563,21 @@ window.addEventListener("resize", function () {
 
         $(".s8").siblings('.load_more_button').css("display", "inline-block");
 
-        // $(".load_more_button").css("display", "inline-block");
+
     } else {
         $(".s8").siblings('.load_more_button').css("display", "");
-        // $(".load_more_button").css("display", "");
+
     }
 });
 
 function ResizeOnLoadSection8() {
     var element = document.getElementsByClassName("s8")[0];
     if (element.offsetHeight < element.scrollHeight) {
-        // $(".load_more_button").css("display", "inline-block");
-          $(".s8").siblings('.load_more_button').css("display", "inline-block");
+
+        $(".s8").siblings('.load_more_button').css("display", "inline-block");
     } else {
-        // $(".load_more_button").css("display", "");
-         $(".s8").siblings('.load_more_button').css("display", "");
+
+        $(".s8").siblings('.load_more_button').css("display", "");
     }
     return;
 }
