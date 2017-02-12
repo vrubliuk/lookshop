@@ -1277,6 +1277,8 @@ a:hover {
   margin: auto;
   text-align: center;
   font-size: 0;
+  height: 425px;
+  overflow: hidden;
 }
 
 .s8::after {

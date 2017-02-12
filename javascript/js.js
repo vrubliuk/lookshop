@@ -1,19 +1,27 @@
-window.onload = function () {
+$(document).ready(function() {
     ChangeSlidesAuto();
-    ResizeOnLoadSection1();
-    ResizeOnloadSection2();
-    ResizeOnloadSection4();
-    ResizeOnloadSection5();
+});
+$(document).ready(function() {
+   ResizeOnLoadSection1();
+});
+$(document).ready(function() {
+   ResizeOnLoadSection2();
+});
+$(document).ready(function() {
+    ResizeOnLoadSection4();
+});
+$(document).ready(function() {
+    ResizeOnLoadSection5();
+});
+$(document).ready(function() {
     ResizeOnLoadSection6();
+});
+$(document).ready(function() {
     ResizeOnLoadSection13();
-
-};
-
+});
 
 // SECTION 1
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function ShowCurrencyList() {
     var x = document.getElementsByClassName("s1_dropdown_content_currency")[0].classList.contains("show");
     if (x !== true) {
@@ -101,7 +109,7 @@ window.addEventListener("resize", function () {
         document.getElementsByClassName("s1_password")[0].style.display = "block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
         document.getElementsByClassName("s1_signin")[0].style.display = "block";
-        document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
+        $(".s1_signin").css("margin", "auto");
 
     } else if (w > 640) {
         document.getElementsByClassName("s1_left")[0].removeAttribute("style");
@@ -111,7 +119,7 @@ window.addEventListener("resize", function () {
         document.getElementsByClassName("s1_password")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_signin")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
+        $(".s1_signin").css("margin", "");
     }
 });
 
@@ -126,7 +134,7 @@ function ResizeOnLoadSection1() {
         document.getElementsByClassName("s1_password")[0].style.display = "block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
         document.getElementsByClassName("s1_signin")[0].style.display = "block";
-        document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
+        $(".s1_signin").css("margin", "auto");
     } else if (w > 640) {
         document.getElementsByClassName("s1_left")[0].removeAttribute("style");
         document.getElementsByClassName("s1_right")[0].removeAttribute("style");
@@ -135,7 +143,7 @@ function ResizeOnLoadSection1() {
         document.getElementsByClassName("s1_password")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_signin")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
+       $(".s1_signin").css("margin", "");
     }
     return;
 }
@@ -231,7 +239,7 @@ window.addEventListener("resize", function () {
     }
 });
 
-function ResizeOnloadSection2() {
+function ResizeOnLoadSection2() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 880) {
         document.getElementsByClassName("s2_menu")[0].style.display = "none";
@@ -352,7 +360,7 @@ window.addEventListener("resize", function () {
     }
 });
 
-function ResizeOnloadSection4() {
+function ResizeOnLoadSection4() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 640) {
         $(".s4_left_text").css("display", "none");
@@ -387,7 +395,7 @@ window.addEventListener("resize", function () {
     }
 });
 
-function ResizeOnloadSection5() {
+function ResizeOnLoadSection5() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 660) {
         $(".s5_left").css("width", "100%");

@@ -1,12 +1,12 @@
-window.onload = function () {
-   
-    ResizeOnLoadSection1();
-    ResizeOnloadSection2();
-    ResizeOnLoadSection13();
-   
-
-};
-
+$(document).ready(function() {
+   ResizeOnLoadSection1(); 
+});
+$(document).ready(function() {
+   ResizeOnLoadSection2();
+});
+$(document).ready(function() {
+   ResizeOnLoadSection13();
+});
 
 // SECTION 1
 
@@ -98,7 +98,7 @@ window.addEventListener("resize", function () {
         document.getElementsByClassName("s1_password")[0].style.display = "block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
         document.getElementsByClassName("s1_signin")[0].style.display = "block";
-        document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
+        $(".s1_signin").css("margin", "auto");
 
     } else if (w > 640) {
         document.getElementsByClassName("s1_left")[0].removeAttribute("style");
@@ -108,7 +108,7 @@ window.addEventListener("resize", function () {
         document.getElementsByClassName("s1_password")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_signin")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
+        $(".s1_signin").css("margin", "");
     }
 });
 
@@ -123,7 +123,7 @@ function ResizeOnLoadSection1() {
         document.getElementsByClassName("s1_password")[0].style.display = "block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "block";
         document.getElementsByClassName("s1_signin")[0].style.display = "block";
-        document.getElementsByClassName("s1_signin")[0].style.margin = "auto";
+        $(".s1_signin").css("margin", "auto");
     } else if (w > 640) {
         document.getElementsByClassName("s1_left")[0].removeAttribute("style");
         document.getElementsByClassName("s1_right")[0].removeAttribute("style");
@@ -132,7 +132,7 @@ function ResizeOnLoadSection1() {
         document.getElementsByClassName("s1_password")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_checkbox")[0].style.display = "inline-block";
         document.getElementsByClassName("s1_signin")[0].style.display = "inline-block";
-        document.getElementsByClassName("s1_signin")[0].removeProperty("margin");
+        $(".s1_signin").css("margin", "");
     }
     return;
 }
@@ -228,9 +228,10 @@ window.addEventListener("resize", function () {
     }
 });
 
-function ResizeOnloadSection2() {
+function ResizeOnLoadSection2() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w <= 880) {
+        
         document.getElementsByClassName("s2_menu")[0].style.display = "none";
         document.getElementsByClassName("s2_menu_button")[0].style.display = "block";
         document.getElementsByClassName("section2")[0].style.height = "174px";
@@ -253,6 +254,7 @@ function ResizeOnloadSection2() {
         $(".s2_cart").css("width", "100%");
         $(".s2").css("padding-top", "0px");
     } else if (w > 880) {
+       
         document.getElementsByClassName("s2_menu")[0].style.display = "block";
         document.getElementsByClassName("s2_menu_button")[0].style.display = "none";
         document.getElementsByClassName("section2")[0].style.height = "104px";
